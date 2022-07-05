@@ -1,0 +1,1087 @@
+/* CS Responsive Drupal Stylesheet
+ * 
+ * Vanessa Burke
+ * vanessa.burke@ualberta.ca
+ * April 30, 2014
+ *
+ */
+/* Colours */
+/* Grey */
+/* Tan */
+/* Heading color */
+/* Fonts */
+@font-face {
+  font-family: "DIN Medium";
+  src: url("../fonts/DINWeb-Medium.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/DINWeb-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/DINWeb-Medium.woff") format("woff"), url("../fonts/DINWeb-Medium.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  /* url($file + '.svg#svgFontName') format('svg');  Legacy iOS */ }
+@font-face {
+  font-family: "DIN Bold";
+  src: url("../fonts/DINWeb-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/DINWeb-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/DINWeb-Bold.woff") format("woff"), url("../fonts/DINWeb-Bold.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  /* url($file + '.svg#svgFontName') format('svg');  Legacy iOS */ }
+/* Layout */
+/* 1 col, ~25% width */
+/* 2 col, ~50% width */
+/* 3 col, ~75% width */
+/* Mixins */
+/* Main definitions */
+body {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  font-family: "Helvetica Neue", Arial, sans-serif; }
+
+section, article, header, footer, nav, aside, hgroup {
+  display: block; }
+
+.wrap {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0; }
+
+.hangleft {
+  float: left; }
+
+.hangright {
+  float: right; }
+
+.imgleft {
+  float: left;
+  margin: 0 1em 1em 0;
+  clear: left; }
+
+/* Font definitions */
+h1, h2, h3, table.views-table th, table.cms th, .field-field-course-number .field-item, h4, h5, h6, blockquote p, blockquote ul, blockquote ol, blockquote table td, table blockquote td, blockquote table th, table blockquote th, blockquote cite, blockquote p cite, blockquote .caption, blockquote .meat .breadcrumb, .meat blockquote .breadcrumb, blockquote .field, blockquote div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content blockquote .field, blockquote div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content blockquote .field, blockquote .item-list ul.pager li, .item-list ul.pager blockquote li, .feature .caption h2, .extrude h2, table.views-table caption, table.cms caption {
+  font-family: "DIN Bold", "Helvetica Neue", Arial, sans-serif;
+  color: #383838;
+  font-weight: normal;
+  line-height: 1.3em;
+  margin: 0.5em 0;
+  font-size: 18pt; }
+  @media screen and (min-width: 1200px) {
+    h1, h2, h3, table.views-table th, table.cms th, .field-field-course-number .field-item, h4, h5, h6, blockquote p, blockquote ul, blockquote ol, blockquote table td, table blockquote td, blockquote table th, table blockquote th, blockquote cite, blockquote p cite, blockquote .caption, blockquote .meat .breadcrumb, .meat blockquote .breadcrumb, blockquote .field, blockquote div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content blockquote .field, blockquote div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content blockquote .field, blockquote .item-list ul.pager li, .item-list ul.pager blockquote li, .feature .caption h2, .extrude h2, table.views-table caption, table.cms caption {
+      font-size: 20pt; } }
+
+h2, h3, table.views-table th, table.cms th, .field-field-course-number .field-item, h4, h5, h6, blockquote p, blockquote ul, blockquote ol, blockquote table td, table blockquote td, blockquote table th, table blockquote th, blockquote cite, blockquote p cite, blockquote .caption, blockquote .meat .breadcrumb, .meat blockquote .breadcrumb, blockquote .field, blockquote div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content blockquote .field, blockquote div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content blockquote .field, blockquote .item-list ul.pager li, .item-list ul.pager blockquote li, .feature .caption h2, .extrude h2, table.views-table caption, table.cms caption {
+  font-size: 15pt; }
+  @media screen and (min-width: 1200px) {
+    h2, h3, table.views-table th, table.cms th, .field-field-course-number .field-item, h4, h5, h6, blockquote p, blockquote ul, blockquote ol, blockquote table td, table blockquote td, blockquote table th, table blockquote th, blockquote cite, blockquote p cite, blockquote .caption, blockquote .meat .breadcrumb, .meat blockquote .breadcrumb, blockquote .field, blockquote div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content blockquote .field, blockquote div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content blockquote .field, blockquote .item-list ul.pager li, .item-list ul.pager blockquote li, .feature .caption h2, .extrude h2, table.views-table caption, table.cms caption {
+      font-size: 16pt; } }
+
+h3, table.views-table th, table.cms th, .field-field-course-number .field-item {
+  font-family: "DIN Medium", "Helvetica Neue", Arial, sans-serif;
+  font-size: 12pt;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: "DIN Bold", "Helvetica Neue", Arial, sans-serif; }
+  @media screen and (min-width: 1200px) {
+    h3, table.views-table th, table.cms th, .field-field-course-number .field-item {
+      font-size: 13pt; } }
+
+h4, h5, h6, blockquote p, blockquote ul, blockquote ol, blockquote table td, table blockquote td, blockquote table th, table blockquote th, blockquote cite, blockquote p cite, blockquote .caption, blockquote .meat .breadcrumb, .meat blockquote .breadcrumb, blockquote .field, blockquote div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content blockquote .field, blockquote div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content blockquote .field, blockquote .item-list ul.pager li, .item-list ul.pager blockquote li, .feature .caption h2, .feature .caption h3, .feature .caption table.views-table th, table.views-table .feature .caption th, .feature .caption table.cms th, table.cms .feature .caption th, .feature .caption .field-field-course-number .field-item, .field-field-course-number .feature .caption .field-item, .feature .caption h4, .feature .caption table.views-table caption, table.views-table .feature .caption caption, .feature .caption table.cms caption, table.cms .feature .caption caption, .extrude h2, .extrude h3, .extrude table.views-table th, table.views-table .extrude th, .extrude table.cms th, table.cms .extrude th, .extrude .field-field-course-number .field-item, .field-field-course-number .extrude .field-item, .extrude h4, .extrude table.views-table caption, table.views-table .extrude caption, .extrude table.cms caption, table.cms .extrude caption {
+  font-size: 13pt; }
+  @media screen and (min-width: 1200px) {
+    h4, h5, h6, blockquote p, blockquote ul, blockquote ol, blockquote table td, table blockquote td, blockquote table th, table blockquote th, blockquote cite, blockquote p cite, blockquote .caption, blockquote .meat .breadcrumb, .meat blockquote .breadcrumb, blockquote .field, blockquote div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content blockquote .field, blockquote div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content blockquote .field, blockquote .item-list ul.pager li, .item-list ul.pager blockquote li, .feature .caption h2, .feature .caption h3, .feature .caption table.views-table th, table.views-table .feature .caption th, .feature .caption table.cms th, table.cms .feature .caption th, .feature .caption .field-field-course-number .field-item, .field-field-course-number .feature .caption .field-item, .feature .caption h4, .feature .caption table.views-table caption, table.views-table .feature .caption caption, .feature .caption table.cms caption, table.cms .feature .caption caption, .extrude h2, .extrude h3, .extrude table.views-table th, table.views-table .extrude th, .extrude table.cms th, table.cms .extrude th, .extrude .field-field-course-number .field-item, .field-field-course-number .extrude .field-item, .extrude h4, .extrude table.views-table caption, table.views-table .extrude caption, .extrude table.cms caption, table.cms .extrude caption {
+      font-size: 14pt; } }
+
+h5, h6, blockquote p, blockquote ul, blockquote ol, blockquote table td, table blockquote td, blockquote table th, table blockquote th, blockquote cite, blockquote p cite, blockquote .caption, blockquote .meat .breadcrumb, .meat blockquote .breadcrumb, blockquote .field, blockquote div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content blockquote .field, blockquote div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content blockquote .field, blockquote .item-list ul.pager li, .item-list ul.pager blockquote li, .feature .caption h2, .feature .caption h3, .feature .caption table.views-table th, table.views-table .feature .caption th, .feature .caption table.cms th, table.cms .feature .caption th, .feature .caption .field-field-course-number .field-item, .field-field-course-number .feature .caption .field-item, .feature .caption h4, .feature .caption h5, .feature .caption table.views-table caption, table.views-table .feature .caption caption, .feature .caption table.cms caption, table.cms .feature .caption caption, .extrude h2, .extrude h3, .extrude table.views-table th, table.views-table .extrude th, .extrude table.cms th, table.cms .extrude th, .extrude .field-field-course-number .field-item, .field-field-course-number .extrude .field-item, .extrude h4, .extrude h5, .extrude table.views-table caption, table.views-table .extrude caption, .extrude table.cms caption, table.cms .extrude caption {
+  font-size: 12pt; }
+  @media screen and (min-width: 1200px) {
+    h5, h6, blockquote p, blockquote ul, blockquote ol, blockquote table td, table blockquote td, blockquote table th, table blockquote th, blockquote cite, blockquote p cite, blockquote .caption, blockquote .meat .breadcrumb, .meat blockquote .breadcrumb, blockquote .field, blockquote div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content blockquote .field, blockquote div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content blockquote .field, blockquote .item-list ul.pager li, .item-list ul.pager blockquote li, .feature .caption h2, .feature .caption h3, .feature .caption table.views-table th, table.views-table .feature .caption th, .feature .caption table.cms th, table.cms .feature .caption th, .feature .caption .field-field-course-number .field-item, .field-field-course-number .feature .caption .field-item, .feature .caption h4, .feature .caption h5, .feature .caption table.views-table caption, table.views-table .feature .caption caption, .feature .caption table.cms caption, table.cms .feature .caption caption, .extrude h2, .extrude h3, .extrude table.views-table th, table.views-table .extrude th, .extrude table.cms th, table.cms .extrude th, .extrude .field-field-course-number .field-item, .field-field-course-number .extrude .field-item, .extrude h4, .extrude h5, .extrude table.views-table caption, table.views-table .extrude caption, .extrude table.cms caption, table.cms .extrude caption {
+      font-size: 13pt; } }
+
+h6 {
+  color: #6b6b6b; }
+
+p, ul, ol, table td, table th, cite, blockquote p cite, .caption, .meat .breadcrumb, .field, div.fieldgroup.group-details .content .field, div.fieldgroup.group-info .content .field, .item-list ul.pager li, dl, form {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 10pt;
+  line-height: 1.5em;
+  color: #3D4A43; }
+  @media screen and (min-width: 500px) and (max-width: 1499px) {
+    p, ul, ol, table td, table th, cite, blockquote p cite, .caption, .meat .breadcrumb, .field, div.fieldgroup.group-details .content .field, div.fieldgroup.group-info .content .field, .item-list ul.pager li, dl, form {
+      font-size: 11pt; } }
+  @media screen and (min-width: 1500px) {
+    p, ul, ol, table td, table th, cite, blockquote p cite, .caption, .meat .breadcrumb, .field, div.fieldgroup.group-details .content .field, div.fieldgroup.group-info .content .field, .item-list ul.pager li, dl, form {
+      font-size: 12pt; } }
+
+ul, ol {
+  padding-left: 1.5em;
+  line-height: 1.5em;
+  /* li { margin: 0.2em 0; } */ }
+
+/* Table default */
+table {
+  margin: 1em 0;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #DDD; }
+  table td, table th {
+    padding: 5px;
+    text-align: left; }
+  table th {
+    font-weight: bold;
+    color: #000;
+    background-color: #F0F4F2; }
+  table.views-table, table.cms {
+    /* Views tables */
+    border: 0; }
+    table.views-table caption, table.cms caption {
+      text-align: left; }
+    table.views-table td, table.cms td {
+      vertical-align: top;
+      border-bottom: 1px solid #DDD;
+      background-color: #fff;
+      font-size: 10pt; }
+      table.views-table td.active, table.cms td.active {
+        background-color: #eaeaea; }
+      @media screen and (min-width: 900px) and (max-width: 1499px) {
+        table.views-table td, table.cms td {
+          font-size: 11pt; } }
+      @media screen and (min-width: 1500px) {
+        table.views-table td, table.cms td {
+          font-size: 12pt; } }
+    table.views-table th, table.cms th {
+      font-size: 10pt;
+      border-bottom: 3px solid #DDD; }
+    table.views-table tbody th, table.cms tbody th {
+      border-width: 1px;
+      font-size: 11pt;
+      letter-spacing: 0;
+      text-transform: none; }
+
+a, .item-list ul.pager li a {
+  color: #007D3F; }
+  a:visited, .item-list ul.pager li a:visited {
+    color: #608800; }
+  a:hover, .item-list ul.pager li a:hover {
+    color: #000;
+    text-decoration: none; }
+  a b, .item-list ul.pager li a b, a strong, .item-list ul.pager li a strong {
+    color: #007D3F; }
+
+b, strong {
+  color: #000; }
+
+.highlight {
+  background: linear-gradient(to bottom, #E7EEEA, #fff) repeat scroll 0 0 transparent;
+  border: 5px solid #FFF;
+  /* Rounded box */
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  padding: 0.5em; }
+  .highlight.yellow {
+    background: linear-gradient(to bottom, #FFF8D3, #fff) repeat scroll 0 0 transparent; }
+
+.description {
+  color: #858585; }
+
+.line {
+  border-top: 1px dotted #DDD;
+  margin: 1.5em 0 1em 0; }
+
+/* Button styles */
+.button {
+  margin: 0.5em 0; }
+
+a.button, .item-list ul.pager li a.button {
+  font-family: "DIN Bold", "Helvetica Neue", Arial, sans-serif;
+  font-size: 13pt;
+  color: #007D3F;
+  text-decoration: none;
+  text-shadow: 0 1px 1px #fff;
+  text-align: left;
+  background-color: #f4f4f4;
+  background-image: linear-gradient(to bottom, #f4f4f4, #dfe9e3);
+  border: 1px solid #cadbd1;
+  border-right-color: #c1d5c9;
+  border-bottom-color: #c1d5c9;
+  padding: 0.4em 0.8em;
+  /* Rounded box */
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2); }
+  a.button:hover, .item-list ul.pager li a.button:hover {
+    background-image: linear-gradient(to bottom, #fff, #f1f5f3); }
+  a.button.green, .item-list ul.pager li a.button.green {
+    color: #fff;
+    background-color: #007D3F;
+    background-image: linear-gradient(to bottom, #00af5c, #007c41);
+    border: 1px solid #00783c;
+    border-right-color: #006935;
+    border-bottom-color: #006935;
+    text-shadow: 1px 1px 1px #055e33; }
+    a.button.green:hover {
+      background-image: linear-gradient(to bottom, #00b961, #008646); }
+  a.button.yellow, .item-list ul.pager li a.button.yellow {
+    color: #007D3F;
+    background-color: #FFDC0E;
+    background-image: linear-gradient(transparent 90%, rgba(0, 0, 0, 0.1)), linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.35) 50%, transparent 50%);
+    border: 1px solid #e4c300;
+    border-right-color: #c1a500;
+    border-bottom-color: #c1a500;
+    text-shadow: 1px 1px 2px #fff5b7; }
+    a.button.yellow:hover {
+      background-color: #ffe75b; }
+
+/* Image styles */
+img {
+  max-width: 100%; }
+  img.imgright {
+    margin: 0.5em 0; }
+    @media screen and (min-width: 500px) {
+      img.imgright {
+        float: right;
+        width: 35%;
+        margin: 0.5em 0 0.5em 1em; } }
+  img.imgleft {
+    margin: 0.5em 0; }
+    @media screen and (min-width: 500px) {
+      img.imgleft {
+        float: left;
+        width: 35%;
+        margin: 0.5em 1em 0.5em 0; } }
+  img.border {
+    border: 5px solid #fff;
+    /* Rounded box */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2); }
+
+/* Blockquote */
+blockquote {
+  margin: 0;
+  padding: 0.5em;
+  border-top: 1px dotted #DDD;
+  background: url("../images/quote.png") no-repeat scroll left top transparent; }
+  blockquote p, blockquote ul, blockquote ol, blockquote table td, table blockquote td, blockquote table th, table blockquote th, blockquote cite, blockquote p cite, blockquote .caption, blockquote .meat .breadcrumb, .meat blockquote .breadcrumb, blockquote .field, blockquote div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content blockquote .field, blockquote div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content blockquote .field, blockquote .item-list ul.pager li, .item-list ul.pager blockquote li {
+    font-family: Georgia, serif;
+    font-style: italic;
+    line-height: 1.5em;
+    color: #5C7265; }
+
+cite, blockquote p cite, blockquote ul cite, blockquote ol cite, blockquote table td cite, table blockquote td cite, blockquote table th cite, table blockquote th cite, blockquote cite cite, blockquote .caption cite, blockquote .meat .breadcrumb cite, .meat blockquote .breadcrumb cite, blockquote .field cite, blockquote div.fieldgroup.group-details .content .field cite, div.fieldgroup.group-details .content blockquote .field cite, blockquote div.fieldgroup.group-info .content .field cite, div.fieldgroup.group-info .content blockquote .field cite, blockquote .item-list ul.pager li cite, .item-list ul.pager blockquote li cite, .caption {
+  color: #858585;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 10pt;
+  font-style: italic; }
+
+.clear {
+  clear: both; }
+
+/* Layout */
+.global .logo {
+  margin: 0.7em 0;
+  display: block;
+  height: 2.5em;
+  float: left; }
+  @media (max-width: 350px) {
+    .global .logo {
+      height: 2.2em; } }
+.global .gnav {
+  float: right; }
+  @media (max-width: 1050px) {
+    .global .gnav #block-menu-secondary-links {
+      display: none; } }
+  .global .gnav ul {
+    margin: 1.5em 0;
+    padding: 0; }
+    .global .gnav ul li {
+      float: left;
+      list-style: none;
+      padding: 0 1em;
+      border-right: 1px solid #DDD;
+      font-size: 9pt;
+      /*@media screen and (min-width: $break-med) { font-size: $text-size; }*/ }
+      .global .gnav ul li.last {
+        border-right: 0; }
+      @media screen and (min-width: 1200px) {
+        .global .gnav ul li {
+          font-size: 10pt; } }
+    @media (max-width: 1050px) {
+      .global .gnav ul {
+        display: none; } }
+  .global .gnav select {
+    display: none; }
+    @media (max-width: 1050px) {
+      .global .gnav select {
+        display: inline-block;
+        margin: 2em 0.5em;
+        color: #858585; } }
+.global .search {
+  float: right; }
+  .global .search table.gsc-search-box, .global .search table.gsc-search-box tbody {
+    border-top: none;
+    margin-top: 1.3em;
+    width: 200px; }
+    @media (max-width: 600px) {
+      .global .search table.gsc-search-box, .global .search table.gsc-search-box tbody {
+        display: none; } }
+  .global .search table td.gsc-clear-button {
+    padding: 5px 0; }
+  .global .search .cse input.gsc-search-button, .global .search input.gsc-search-button {
+    background-image: linear-gradient(to bottom, #f4f4f4, #dfe9e3);
+    background-repeat: repeat-x;
+    border-color: #dfe9e3 #d0dfd6 #b8cec1 #dfe9e3;
+    color: #007D3F; }
+  .global .search .icon {
+    display: none;
+    margin-top: 1em; }
+    @media (max-width: 600px) {
+      .global .search .icon {
+        display: inline-block; } }
+.global p, .global ul, .global ol, .global table td, table .global td, .global table th, table .global th, .global cite, .global .caption, .global .meat .breadcrumb, .meat .global .breadcrumb, .global .field, .global div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content .global .field, .global div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content .global .field, .global .item-list ul.pager li, .item-list ul.pager .global li {
+  margin: 0.75em 0 0 0;
+  color: #DDD;
+  font-size: 11pt;
+  line-height: 1.5em; }
+  .global p a, .global ul a, .global ol a, .global table td a, table .global td a, .global table th a, table .global th a, .global cite a, .global .caption a, .global .meat .breadcrumb a, .meat .global .breadcrumb a, .global .field a, .global div.fieldgroup.group-details .content .field a, div.fieldgroup.group-details .content .global .field a, .global div.fieldgroup.group-info .content .field a, div.fieldgroup.group-info .content .global .field a, .item-list ul.pager li .global p a, .item-list .global ul.pager li a, .item-list ul.pager li .global ol a, .item-list ul.pager li .global table td a, .item-list ul.pager li table .global td a, .item-list ul.pager li .global table th a, .item-list ul.pager li table .global th a, .item-list ul.pager li .global cite a, .item-list ul.pager li .global .caption a, .item-list ul.pager li .global .field a, .global .item-list ul.pager li a, .item-list ul.pager .global li a {
+    color: #858585;
+    text-decoration: none; }
+    .global p a:hover, .global ul a:hover, .global ol a:hover, .global table td a:hover, table .global td a:hover, .global table th a:hover, table .global th a:hover, .global cite a:hover, .global .caption a:hover, .global .meat .breadcrumb a:hover, .meat .global .breadcrumb a:hover, .global .field a:hover, .global div.fieldgroup.group-details .content .field a:hover, div.fieldgroup.group-details .content .global .field a:hover, .global div.fieldgroup.group-info .content .field a:hover, div.fieldgroup.group-info .content .global .field a:hover, .item-list ul.pager li .global p a:hover, .item-list .global ul.pager li a:hover, .item-list ul.pager li .global ol a:hover, .item-list ul.pager li .global cite a:hover, .global .item-list ul.pager li a:hover, .item-list ul.pager .global li a:hover {
+      text-decoration: underline; }
+
+header[role="banner"] {
+  background: url("../images/banner-bg.svg") no-repeat 10% 50%;
+  background-color: #087541;
+  border-bottom: 3px solid #FFDC0E;
+  -webkit-box-shadow: inset 8px #111 5px #000000;
+  -moz-box-shadow: inset 8px #111 5px #000000;
+  -o-box-shadow: inset 8px #111 5px #000000;
+  box-shadow: inset 8px #111 5px #000000;
+  /* Faculty of Science */
+  /* Department of Computing Science */ }
+  header[role="banner"] h2, header[role="banner"] h3, header[role="banner"] table.views-table th, table.views-table header[role="banner"] th, header[role="banner"] table.cms th, table.cms header[role="banner"] th, header[role="banner"] .field-field-course-number .field-item, .field-field-course-number header[role="banner"] .field-item, header[role="banner"] h4, header[role="banner"] h5, header[role="banner"] h6, header[role="banner"] blockquote p, blockquote header[role="banner"] p, header[role="banner"] blockquote ul, blockquote header[role="banner"] ul, header[role="banner"] blockquote ol, blockquote header[role="banner"] ol, header[role="banner"] blockquote table td, blockquote table header[role="banner"] td, header[role="banner"] table blockquote td, table blockquote header[role="banner"] td, header[role="banner"] blockquote table th, blockquote table header[role="banner"] th, header[role="banner"] table blockquote th, table blockquote header[role="banner"] th, header[role="banner"] blockquote cite, blockquote header[role="banner"] cite, header[role="banner"] blockquote .caption, blockquote header[role="banner"] .caption, header[role="banner"] blockquote .meat .breadcrumb, blockquote .meat header[role="banner"] .breadcrumb, header[role="banner"] .meat blockquote .breadcrumb, .meat blockquote header[role="banner"] .breadcrumb, header[role="banner"] blockquote .field, blockquote header[role="banner"] .field, header[role="banner"] blockquote div.fieldgroup.group-details .content .field, blockquote div.fieldgroup.group-details .content header[role="banner"] .field, header[role="banner"] div.fieldgroup.group-details .content blockquote .field, div.fieldgroup.group-details .content blockquote header[role="banner"] .field, header[role="banner"] blockquote div.fieldgroup.group-info .content .field, blockquote div.fieldgroup.group-info .content header[role="banner"] .field, header[role="banner"] div.fieldgroup.group-info .content blockquote .field, div.fieldgroup.group-info .content blockquote header[role="banner"] .field, header[role="banner"] blockquote .item-list ul.pager li, blockquote .item-list ul.pager header[role="banner"] li, header[role="banner"] .item-list ul.pager blockquote li, .item-list ul.pager blockquote header[role="banner"] li, header[role="banner"] .feature .caption h2, .feature .caption header[role="banner"] h2, header[role="banner"] table.views-table caption, table.views-table header[role="banner"] caption, header[role="banner"] table.cms caption, table.cms header[role="banner"] caption {
+    padding-top: 0.8em;
+    margin-bottom: 0; }
+    header[role="banner"] h2 a, header[role="banner"] h3 a, header[role="banner"] table.views-table th a, table.views-table header[role="banner"] th a, header[role="banner"] table.cms th a, table.cms header[role="banner"] th a, header[role="banner"] .field-field-course-number .field-item a, .field-field-course-number header[role="banner"] .field-item a, header[role="banner"] h4 a, header[role="banner"] h5 a, header[role="banner"] h6 a, header[role="banner"] blockquote p a, blockquote header[role="banner"] p a, header[role="banner"] blockquote ul a, blockquote header[role="banner"] ul a, header[role="banner"] blockquote ol a, blockquote header[role="banner"] ol a, header[role="banner"] blockquote table td a, blockquote table header[role="banner"] td a, header[role="banner"] table blockquote td a, table blockquote header[role="banner"] td a, header[role="banner"] blockquote table th a, blockquote table header[role="banner"] th a, header[role="banner"] table blockquote th a, table blockquote header[role="banner"] th a, header[role="banner"] blockquote cite a, blockquote header[role="banner"] cite a, header[role="banner"] blockquote .caption a, blockquote header[role="banner"] .caption a, header[role="banner"] blockquote .meat .breadcrumb a, blockquote .meat header[role="banner"] .breadcrumb a, header[role="banner"] .meat blockquote .breadcrumb a, .meat blockquote header[role="banner"] .breadcrumb a, header[role="banner"] blockquote .field a, blockquote header[role="banner"] .field a, header[role="banner"] blockquote div.fieldgroup.group-details .content .field a, blockquote div.fieldgroup.group-details .content header[role="banner"] .field a, header[role="banner"] div.fieldgroup.group-details .content blockquote .field a, div.fieldgroup.group-details .content blockquote header[role="banner"] .field a, header[role="banner"] blockquote div.fieldgroup.group-info .content .field a, blockquote div.fieldgroup.group-info .content header[role="banner"] .field a, header[role="banner"] div.fieldgroup.group-info .content blockquote .field a, div.fieldgroup.group-info .content blockquote header[role="banner"] .field a, header[role="banner"] .feature .caption h2 a, .feature .caption header[role="banner"] h2 a, header[role="banner"] table.views-table caption a, table.views-table header[role="banner"] caption a, header[role="banner"] table.cms caption a, table.cms header[role="banner"] caption a, header[role="banner"] h2 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h2 a, header[role="banner"] h3 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h3 a, header[role="banner"] h4 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h4 a, header[role="banner"] h5 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h5 a, header[role="banner"] h6 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h6 a, .item-list ul.pager li header[role="banner"] blockquote p a, .item-list ul.pager li blockquote header[role="banner"] p a, .item-list header[role="banner"] blockquote ul.pager li a, blockquote header[role="banner"] .item-list ul.pager li a, .item-list blockquote header[role="banner"] ul.pager li a, .item-list ul.pager li header[role="banner"] blockquote ol a, .item-list ul.pager li blockquote header[role="banner"] ol a, .item-list ul.pager li header[role="banner"] blockquote table td a, .item-list ul.pager li blockquote table header[role="banner"] td a, .item-list ul.pager li header[role="banner"] table blockquote td a, .item-list ul.pager li table blockquote header[role="banner"] td a, .item-list ul.pager li header[role="banner"] blockquote table th a, .item-list ul.pager li blockquote table header[role="banner"] th a, .item-list ul.pager li header[role="banner"] table blockquote th a, .item-list ul.pager li table blockquote header[role="banner"] th a, .item-list ul.pager li header[role="banner"] blockquote cite a, .item-list ul.pager li blockquote header[role="banner"] cite a, header[role="banner"] blockquote .item-list ul.pager li a, blockquote .item-list ul.pager header[role="banner"] li a, header[role="banner"] .item-list ul.pager blockquote li a, .item-list ul.pager blockquote header[role="banner"] li a {
+      font-family: "DIN Medium", "Helvetica Neue", Arial, sans-serif;
+      font-size: 14pt;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #fff;
+      text-decoration: none; }
+      header[role="banner"] h2 a:hover, header[role="banner"] h3 a:hover, header[role="banner"] table.views-table th a:hover, table.views-table header[role="banner"] th a:hover, header[role="banner"] table.cms th a:hover, table.cms header[role="banner"] th a:hover, header[role="banner"] .field-field-course-number .field-item a:hover, .field-field-course-number header[role="banner"] .field-item a:hover, header[role="banner"] h4 a:hover, header[role="banner"] h5 a:hover, header[role="banner"] h6 a:hover, header[role="banner"] blockquote p a:hover, blockquote header[role="banner"] p a:hover, header[role="banner"] blockquote ul a:hover, blockquote header[role="banner"] ul a:hover, header[role="banner"] blockquote ol a:hover, blockquote header[role="banner"] ol a:hover, header[role="banner"] blockquote table td a:hover, blockquote table header[role="banner"] td a:hover, header[role="banner"] table blockquote td a:hover, table blockquote header[role="banner"] td a:hover, header[role="banner"] blockquote table th a:hover, blockquote table header[role="banner"] th a:hover, header[role="banner"] table blockquote th a:hover, table blockquote header[role="banner"] th a:hover, header[role="banner"] blockquote cite a:hover, blockquote header[role="banner"] cite a:hover, header[role="banner"] blockquote .caption a:hover, blockquote header[role="banner"] .caption a:hover, header[role="banner"] blockquote .meat .breadcrumb a:hover, blockquote .meat header[role="banner"] .breadcrumb a:hover, header[role="banner"] .meat blockquote .breadcrumb a:hover, .meat blockquote header[role="banner"] .breadcrumb a:hover, header[role="banner"] blockquote .field a:hover, blockquote header[role="banner"] .field a:hover, header[role="banner"] blockquote div.fieldgroup.group-details .content .field a:hover, blockquote div.fieldgroup.group-details .content header[role="banner"] .field a:hover, header[role="banner"] div.fieldgroup.group-details .content blockquote .field a:hover, div.fieldgroup.group-details .content blockquote header[role="banner"] .field a:hover, header[role="banner"] blockquote div.fieldgroup.group-info .content .field a:hover, blockquote div.fieldgroup.group-info .content header[role="banner"] .field a:hover, header[role="banner"] div.fieldgroup.group-info .content blockquote .field a:hover, div.fieldgroup.group-info .content blockquote header[role="banner"] .field a:hover, header[role="banner"] table.views-table caption a:hover, table.views-table header[role="banner"] caption a:hover, header[role="banner"] table.cms caption a:hover, table.cms header[role="banner"] caption a:hover, blockquote .item-list ul.pager header[role="banner"] li a:hover, header[role="banner"] .item-list ul.pager blockquote li a:hover, .item-list ul.pager blockquote header[role="banner"] li a:hover {
+        color: #FFDC0E; }
+      @media screen and (min-width: 500px) and (max-width: 900px) {
+        header[role="banner"] h2 a, header[role="banner"] h3 a, header[role="banner"] table.views-table th a, table.views-table header[role="banner"] th a, header[role="banner"] table.cms th a, table.cms header[role="banner"] th a, header[role="banner"] .field-field-course-number .field-item a, .field-field-course-number header[role="banner"] .field-item a, header[role="banner"] h4 a, header[role="banner"] h5 a, header[role="banner"] h6 a, header[role="banner"] blockquote p a, blockquote header[role="banner"] p a, header[role="banner"] blockquote ul a, blockquote header[role="banner"] ul a, header[role="banner"] blockquote ol a, blockquote header[role="banner"] ol a, header[role="banner"] blockquote table td a, blockquote table header[role="banner"] td a, header[role="banner"] table blockquote td a, table blockquote header[role="banner"] td a, header[role="banner"] blockquote table th a, blockquote table header[role="banner"] th a, header[role="banner"] table blockquote th a, table blockquote header[role="banner"] th a, header[role="banner"] blockquote cite a, blockquote header[role="banner"] cite a, header[role="banner"] blockquote .caption a, blockquote header[role="banner"] .caption a, header[role="banner"] blockquote .meat .breadcrumb a, blockquote .meat header[role="banner"] .breadcrumb a, header[role="banner"] .meat blockquote .breadcrumb a, .meat blockquote header[role="banner"] .breadcrumb a, header[role="banner"] blockquote .field a, blockquote header[role="banner"] .field a, header[role="banner"] blockquote div.fieldgroup.group-details .content .field a, blockquote div.fieldgroup.group-details .content header[role="banner"] .field a, header[role="banner"] div.fieldgroup.group-details .content blockquote .field a, div.fieldgroup.group-details .content blockquote header[role="banner"] .field a, header[role="banner"] blockquote div.fieldgroup.group-info .content .field a, blockquote div.fieldgroup.group-info .content header[role="banner"] .field a, header[role="banner"] div.fieldgroup.group-info .content blockquote .field a, div.fieldgroup.group-info .content blockquote header[role="banner"] .field a, header[role="banner"] .feature .caption h2 a, .feature .caption header[role="banner"] h2 a, header[role="banner"] table.views-table caption a, table.views-table header[role="banner"] caption a, header[role="banner"] table.cms caption a, table.cms header[role="banner"] caption a, header[role="banner"] h2 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h2 a, header[role="banner"] h3 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h3 a, header[role="banner"] h4 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h4 a, header[role="banner"] h5 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h5 a, header[role="banner"] h6 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h6 a, .item-list ul.pager li header[role="banner"] blockquote p a, .item-list ul.pager li blockquote header[role="banner"] p a, .item-list header[role="banner"] blockquote ul.pager li a, blockquote header[role="banner"] .item-list ul.pager li a, .item-list blockquote header[role="banner"] ul.pager li a, .item-list ul.pager li header[role="banner"] blockquote ol a, .item-list ul.pager li blockquote header[role="banner"] ol a, .item-list ul.pager li header[role="banner"] blockquote table td a, .item-list ul.pager li blockquote table header[role="banner"] td a, .item-list ul.pager li header[role="banner"] table blockquote td a, .item-list ul.pager li table blockquote header[role="banner"] td a, .item-list ul.pager li header[role="banner"] blockquote table th a, .item-list ul.pager li blockquote table header[role="banner"] th a, .item-list ul.pager li header[role="banner"] table blockquote th a, .item-list ul.pager li table blockquote header[role="banner"] th a, .item-list ul.pager li header[role="banner"] blockquote cite a, .item-list ul.pager li blockquote header[role="banner"] cite a, header[role="banner"] blockquote .item-list ul.pager li a, blockquote .item-list ul.pager header[role="banner"] li a, header[role="banner"] .item-list ul.pager blockquote li a, .item-list ul.pager blockquote header[role="banner"] li a {
+          font-size: 15pt; } }
+      @media screen and (min-width: 901px) {
+        header[role="banner"] h2 a, header[role="banner"] h3 a, header[role="banner"] table.views-table th a, table.views-table header[role="banner"] th a, header[role="banner"] table.cms th a, table.cms header[role="banner"] th a, header[role="banner"] .field-field-course-number .field-item a, .field-field-course-number header[role="banner"] .field-item a, header[role="banner"] h4 a, header[role="banner"] h5 a, header[role="banner"] h6 a, header[role="banner"] blockquote p a, blockquote header[role="banner"] p a, header[role="banner"] blockquote ul a, blockquote header[role="banner"] ul a, header[role="banner"] blockquote ol a, blockquote header[role="banner"] ol a, header[role="banner"] blockquote table td a, blockquote table header[role="banner"] td a, header[role="banner"] table blockquote td a, table blockquote header[role="banner"] td a, header[role="banner"] blockquote table th a, blockquote table header[role="banner"] th a, header[role="banner"] table blockquote th a, table blockquote header[role="banner"] th a, header[role="banner"] blockquote cite a, blockquote header[role="banner"] cite a, header[role="banner"] blockquote .caption a, blockquote header[role="banner"] .caption a, header[role="banner"] blockquote .meat .breadcrumb a, blockquote .meat header[role="banner"] .breadcrumb a, header[role="banner"] .meat blockquote .breadcrumb a, .meat blockquote header[role="banner"] .breadcrumb a, header[role="banner"] blockquote .field a, blockquote header[role="banner"] .field a, header[role="banner"] blockquote div.fieldgroup.group-details .content .field a, blockquote div.fieldgroup.group-details .content header[role="banner"] .field a, header[role="banner"] div.fieldgroup.group-details .content blockquote .field a, div.fieldgroup.group-details .content blockquote header[role="banner"] .field a, header[role="banner"] blockquote div.fieldgroup.group-info .content .field a, blockquote div.fieldgroup.group-info .content header[role="banner"] .field a, header[role="banner"] div.fieldgroup.group-info .content blockquote .field a, div.fieldgroup.group-info .content blockquote header[role="banner"] .field a, header[role="banner"] .feature .caption h2 a, .feature .caption header[role="banner"] h2 a, header[role="banner"] table.views-table caption a, table.views-table header[role="banner"] caption a, header[role="banner"] table.cms caption a, table.cms header[role="banner"] caption a, header[role="banner"] h2 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h2 a, header[role="banner"] h3 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h3 a, header[role="banner"] h4 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h4 a, header[role="banner"] h5 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h5 a, header[role="banner"] h6 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h6 a, .item-list ul.pager li header[role="banner"] blockquote p a, .item-list ul.pager li blockquote header[role="banner"] p a, .item-list header[role="banner"] blockquote ul.pager li a, blockquote header[role="banner"] .item-list ul.pager li a, .item-list blockquote header[role="banner"] ul.pager li a, .item-list ul.pager li header[role="banner"] blockquote ol a, .item-list ul.pager li blockquote header[role="banner"] ol a, .item-list ul.pager li header[role="banner"] blockquote table td a, .item-list ul.pager li blockquote table header[role="banner"] td a, .item-list ul.pager li header[role="banner"] table blockquote td a, .item-list ul.pager li table blockquote header[role="banner"] td a, .item-list ul.pager li header[role="banner"] blockquote table th a, .item-list ul.pager li blockquote table header[role="banner"] th a, .item-list ul.pager li header[role="banner"] table blockquote th a, .item-list ul.pager li table blockquote header[role="banner"] th a, .item-list ul.pager li header[role="banner"] blockquote cite a, .item-list ul.pager li blockquote header[role="banner"] cite a, header[role="banner"] blockquote .item-list ul.pager li a, blockquote .item-list ul.pager header[role="banner"] li a, header[role="banner"] .item-list ul.pager blockquote li a, .item-list ul.pager blockquote header[role="banner"] li a {
+          font-size: 16pt; } }
+  header[role="banner"] h1, header[role="banner"] h2, header[role="banner"] h3, header[role="banner"] table.views-table th, table.views-table header[role="banner"] th, header[role="banner"] table.cms th, table.cms header[role="banner"] th, header[role="banner"] .field-field-course-number .field-item, .field-field-course-number header[role="banner"] .field-item, header[role="banner"] h4, header[role="banner"] h5, header[role="banner"] h6, header[role="banner"] blockquote p, blockquote header[role="banner"] p, header[role="banner"] blockquote ul, blockquote header[role="banner"] ul, header[role="banner"] blockquote ol, blockquote header[role="banner"] ol, header[role="banner"] blockquote table td, blockquote table header[role="banner"] td, header[role="banner"] table blockquote td, table blockquote header[role="banner"] td, header[role="banner"] blockquote table th, blockquote table header[role="banner"] th, header[role="banner"] table blockquote th, table blockquote header[role="banner"] th, header[role="banner"] blockquote cite, blockquote header[role="banner"] cite, header[role="banner"] blockquote .caption, blockquote header[role="banner"] .caption, header[role="banner"] blockquote .meat .breadcrumb, blockquote .meat header[role="banner"] .breadcrumb, header[role="banner"] .meat blockquote .breadcrumb, .meat blockquote header[role="banner"] .breadcrumb, header[role="banner"] blockquote .field, blockquote header[role="banner"] .field, header[role="banner"] blockquote div.fieldgroup.group-details .content .field, blockquote div.fieldgroup.group-details .content header[role="banner"] .field, header[role="banner"] div.fieldgroup.group-details .content blockquote .field, div.fieldgroup.group-details .content blockquote header[role="banner"] .field, header[role="banner"] blockquote div.fieldgroup.group-info .content .field, blockquote div.fieldgroup.group-info .content header[role="banner"] .field, header[role="banner"] div.fieldgroup.group-info .content blockquote .field, div.fieldgroup.group-info .content blockquote header[role="banner"] .field, header[role="banner"] blockquote .item-list ul.pager li, blockquote .item-list ul.pager header[role="banner"] li, header[role="banner"] .item-list ul.pager blockquote li, .item-list ul.pager blockquote header[role="banner"] li, header[role="banner"] .feature .caption h2, .feature .caption header[role="banner"] h2, header[role="banner"] table.views-table caption, table.views-table header[role="banner"] caption, header[role="banner"] table.cms caption, table.cms header[role="banner"] caption {
+    margin-top: 0; }
+    header[role="banner"] h1 a, header[role="banner"] h2 a, header[role="banner"] h3 a, header[role="banner"] table.views-table th a, table.views-table header[role="banner"] th a, header[role="banner"] table.cms th a, table.cms header[role="banner"] th a, header[role="banner"] .field-field-course-number .field-item a, .field-field-course-number header[role="banner"] .field-item a, header[role="banner"] h4 a, header[role="banner"] h5 a, header[role="banner"] h6 a, header[role="banner"] blockquote p a, blockquote header[role="banner"] p a, header[role="banner"] blockquote ul a, blockquote header[role="banner"] ul a, header[role="banner"] blockquote ol a, blockquote header[role="banner"] ol a, header[role="banner"] blockquote table td a, blockquote table header[role="banner"] td a, header[role="banner"] table blockquote td a, table blockquote header[role="banner"] td a, header[role="banner"] blockquote table th a, blockquote table header[role="banner"] th a, header[role="banner"] table blockquote th a, table blockquote header[role="banner"] th a, header[role="banner"] blockquote cite a, blockquote header[role="banner"] cite a, header[role="banner"] blockquote .caption a, blockquote header[role="banner"] .caption a, header[role="banner"] blockquote .meat .breadcrumb a, blockquote .meat header[role="banner"] .breadcrumb a, header[role="banner"] .meat blockquote .breadcrumb a, .meat blockquote header[role="banner"] .breadcrumb a, header[role="banner"] blockquote .field a, blockquote header[role="banner"] .field a, header[role="banner"] blockquote div.fieldgroup.group-details .content .field a, blockquote div.fieldgroup.group-details .content header[role="banner"] .field a, header[role="banner"] div.fieldgroup.group-details .content blockquote .field a, div.fieldgroup.group-details .content blockquote header[role="banner"] .field a, header[role="banner"] blockquote div.fieldgroup.group-info .content .field a, blockquote div.fieldgroup.group-info .content header[role="banner"] .field a, header[role="banner"] div.fieldgroup.group-info .content blockquote .field a, div.fieldgroup.group-info .content blockquote header[role="banner"] .field a, header[role="banner"] .feature .caption h2 a, .feature .caption header[role="banner"] h2 a, header[role="banner"] table.views-table caption a, table.views-table header[role="banner"] caption a, header[role="banner"] table.cms caption a, table.cms header[role="banner"] caption a, header[role="banner"] h1 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h1 a, header[role="banner"] h2 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h2 a, header[role="banner"] h3 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h3 a, header[role="banner"] h4 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h4 a, header[role="banner"] h5 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h5 a, header[role="banner"] h6 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h6 a, .item-list ul.pager li header[role="banner"] blockquote p a, .item-list ul.pager li blockquote header[role="banner"] p a, .item-list header[role="banner"] blockquote ul.pager li a, blockquote header[role="banner"] .item-list ul.pager li a, .item-list blockquote header[role="banner"] ul.pager li a, .item-list ul.pager li header[role="banner"] blockquote ol a, .item-list ul.pager li blockquote header[role="banner"] ol a, .item-list ul.pager li header[role="banner"] blockquote table td a, .item-list ul.pager li blockquote table header[role="banner"] td a, .item-list ul.pager li header[role="banner"] table blockquote td a, .item-list ul.pager li table blockquote header[role="banner"] td a, .item-list ul.pager li header[role="banner"] blockquote table th a, .item-list ul.pager li blockquote table header[role="banner"] th a, .item-list ul.pager li header[role="banner"] table blockquote th a, .item-list ul.pager li table blockquote header[role="banner"] th a, .item-list ul.pager li header[role="banner"] blockquote cite a, .item-list ul.pager li blockquote header[role="banner"] cite a, header[role="banner"] blockquote .item-list ul.pager li a, blockquote .item-list ul.pager header[role="banner"] li a, header[role="banner"] .item-list ul.pager blockquote li a, .item-list ul.pager blockquote header[role="banner"] li a {
+      -webkit-text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+      -moz-text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+      -o-text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+      font-size: 14pt;
+      color: #fff;
+      text-decoration: none; }
+      header[role="banner"] h1 a:hover, header[role="banner"] h2 a:hover, header[role="banner"] h3 a:hover, header[role="banner"] table.views-table th a:hover, table.views-table header[role="banner"] th a:hover, header[role="banner"] table.cms th a:hover, table.cms header[role="banner"] th a:hover, header[role="banner"] .field-field-course-number .field-item a:hover, .field-field-course-number header[role="banner"] .field-item a:hover, header[role="banner"] h4 a:hover, header[role="banner"] h5 a:hover, header[role="banner"] h6 a:hover, header[role="banner"] blockquote p a:hover, blockquote header[role="banner"] p a:hover, header[role="banner"] blockquote ul a:hover, blockquote header[role="banner"] ul a:hover, header[role="banner"] blockquote ol a:hover, blockquote header[role="banner"] ol a:hover, header[role="banner"] blockquote table td a:hover, blockquote table header[role="banner"] td a:hover, header[role="banner"] table blockquote td a:hover, table blockquote header[role="banner"] td a:hover, header[role="banner"] blockquote table th a:hover, blockquote table header[role="banner"] th a:hover, header[role="banner"] table blockquote th a:hover, table blockquote header[role="banner"] th a:hover, header[role="banner"] blockquote cite a:hover, blockquote header[role="banner"] cite a:hover, header[role="banner"] blockquote .caption a:hover, blockquote header[role="banner"] .caption a:hover, header[role="banner"] blockquote .meat .breadcrumb a:hover, blockquote .meat header[role="banner"] .breadcrumb a:hover, header[role="banner"] .meat blockquote .breadcrumb a:hover, .meat blockquote header[role="banner"] .breadcrumb a:hover, header[role="banner"] blockquote .field a:hover, blockquote header[role="banner"] .field a:hover, header[role="banner"] blockquote div.fieldgroup.group-details .content .field a:hover, blockquote div.fieldgroup.group-details .content header[role="banner"] .field a:hover, header[role="banner"] div.fieldgroup.group-details .content blockquote .field a:hover, div.fieldgroup.group-details .content blockquote header[role="banner"] .field a:hover, header[role="banner"] blockquote div.fieldgroup.group-info .content .field a:hover, blockquote div.fieldgroup.group-info .content header[role="banner"] .field a:hover, header[role="banner"] div.fieldgroup.group-info .content blockquote .field a:hover, div.fieldgroup.group-info .content blockquote header[role="banner"] .field a:hover, header[role="banner"] table.views-table caption a:hover, table.views-table header[role="banner"] caption a:hover, header[role="banner"] table.cms caption a:hover, table.cms header[role="banner"] caption a:hover, blockquote .item-list ul.pager header[role="banner"] li a:hover, header[role="banner"] .item-list ul.pager blockquote li a:hover, .item-list ul.pager blockquote header[role="banner"] li a:hover {
+        color: #FFDC0E; }
+      @media screen and (min-width: 500px) and (max-width: 900px) {
+        header[role="banner"] h1 a, header[role="banner"] h2 a, header[role="banner"] h3 a, header[role="banner"] table.views-table th a, table.views-table header[role="banner"] th a, header[role="banner"] table.cms th a, table.cms header[role="banner"] th a, header[role="banner"] .field-field-course-number .field-item a, .field-field-course-number header[role="banner"] .field-item a, header[role="banner"] h4 a, header[role="banner"] h5 a, header[role="banner"] h6 a, header[role="banner"] blockquote p a, blockquote header[role="banner"] p a, header[role="banner"] blockquote ul a, blockquote header[role="banner"] ul a, header[role="banner"] blockquote ol a, blockquote header[role="banner"] ol a, header[role="banner"] blockquote table td a, blockquote table header[role="banner"] td a, header[role="banner"] table blockquote td a, table blockquote header[role="banner"] td a, header[role="banner"] blockquote table th a, blockquote table header[role="banner"] th a, header[role="banner"] table blockquote th a, table blockquote header[role="banner"] th a, header[role="banner"] blockquote cite a, blockquote header[role="banner"] cite a, header[role="banner"] blockquote .caption a, blockquote header[role="banner"] .caption a, header[role="banner"] blockquote .meat .breadcrumb a, blockquote .meat header[role="banner"] .breadcrumb a, header[role="banner"] .meat blockquote .breadcrumb a, .meat blockquote header[role="banner"] .breadcrumb a, header[role="banner"] blockquote .field a, blockquote header[role="banner"] .field a, header[role="banner"] blockquote div.fieldgroup.group-details .content .field a, blockquote div.fieldgroup.group-details .content header[role="banner"] .field a, header[role="banner"] div.fieldgroup.group-details .content blockquote .field a, div.fieldgroup.group-details .content blockquote header[role="banner"] .field a, header[role="banner"] blockquote div.fieldgroup.group-info .content .field a, blockquote div.fieldgroup.group-info .content header[role="banner"] .field a, header[role="banner"] div.fieldgroup.group-info .content blockquote .field a, div.fieldgroup.group-info .content blockquote header[role="banner"] .field a, header[role="banner"] .feature .caption h2 a, .feature .caption header[role="banner"] h2 a, header[role="banner"] table.views-table caption a, table.views-table header[role="banner"] caption a, header[role="banner"] table.cms caption a, table.cms header[role="banner"] caption a, header[role="banner"] h1 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h1 a, header[role="banner"] h2 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h2 a, header[role="banner"] h3 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h3 a, header[role="banner"] h4 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h4 a, header[role="banner"] h5 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h5 a, header[role="banner"] h6 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h6 a, .item-list ul.pager li header[role="banner"] blockquote p a, .item-list ul.pager li blockquote header[role="banner"] p a, .item-list header[role="banner"] blockquote ul.pager li a, blockquote header[role="banner"] .item-list ul.pager li a, .item-list blockquote header[role="banner"] ul.pager li a, .item-list ul.pager li header[role="banner"] blockquote ol a, .item-list ul.pager li blockquote header[role="banner"] ol a, .item-list ul.pager li header[role="banner"] blockquote table td a, .item-list ul.pager li blockquote table header[role="banner"] td a, .item-list ul.pager li header[role="banner"] table blockquote td a, .item-list ul.pager li table blockquote header[role="banner"] td a, .item-list ul.pager li header[role="banner"] blockquote table th a, .item-list ul.pager li blockquote table header[role="banner"] th a, .item-list ul.pager li header[role="banner"] table blockquote th a, .item-list ul.pager li table blockquote header[role="banner"] th a, .item-list ul.pager li header[role="banner"] blockquote cite a, .item-list ul.pager li blockquote header[role="banner"] cite a, header[role="banner"] blockquote .item-list ul.pager li a, blockquote .item-list ul.pager header[role="banner"] li a, header[role="banner"] .item-list ul.pager blockquote li a, .item-list ul.pager blockquote header[role="banner"] li a {
+          font-size: 16pt; } }
+      @media screen and (min-width: 901px) {
+        header[role="banner"] h1 a, header[role="banner"] h2 a, header[role="banner"] h3 a, header[role="banner"] table.views-table th a, table.views-table header[role="banner"] th a, header[role="banner"] table.cms th a, table.cms header[role="banner"] th a, header[role="banner"] .field-field-course-number .field-item a, .field-field-course-number header[role="banner"] .field-item a, header[role="banner"] h4 a, header[role="banner"] h5 a, header[role="banner"] h6 a, header[role="banner"] blockquote p a, blockquote header[role="banner"] p a, header[role="banner"] blockquote ul a, blockquote header[role="banner"] ul a, header[role="banner"] blockquote ol a, blockquote header[role="banner"] ol a, header[role="banner"] blockquote table td a, blockquote table header[role="banner"] td a, header[role="banner"] table blockquote td a, table blockquote header[role="banner"] td a, header[role="banner"] blockquote table th a, blockquote table header[role="banner"] th a, header[role="banner"] table blockquote th a, table blockquote header[role="banner"] th a, header[role="banner"] blockquote cite a, blockquote header[role="banner"] cite a, header[role="banner"] blockquote .caption a, blockquote header[role="banner"] .caption a, header[role="banner"] blockquote .meat .breadcrumb a, blockquote .meat header[role="banner"] .breadcrumb a, header[role="banner"] .meat blockquote .breadcrumb a, .meat blockquote header[role="banner"] .breadcrumb a, header[role="banner"] blockquote .field a, blockquote header[role="banner"] .field a, header[role="banner"] blockquote div.fieldgroup.group-details .content .field a, blockquote div.fieldgroup.group-details .content header[role="banner"] .field a, header[role="banner"] div.fieldgroup.group-details .content blockquote .field a, div.fieldgroup.group-details .content blockquote header[role="banner"] .field a, header[role="banner"] blockquote div.fieldgroup.group-info .content .field a, blockquote div.fieldgroup.group-info .content header[role="banner"] .field a, header[role="banner"] div.fieldgroup.group-info .content blockquote .field a, div.fieldgroup.group-info .content blockquote header[role="banner"] .field a, header[role="banner"] .feature .caption h2 a, .feature .caption header[role="banner"] h2 a, header[role="banner"] table.views-table caption a, table.views-table header[role="banner"] caption a, header[role="banner"] table.cms caption a, table.cms header[role="banner"] caption a, header[role="banner"] h1 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h1 a, header[role="banner"] h2 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h2 a, header[role="banner"] h3 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h3 a, header[role="banner"] h4 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h4 a, header[role="banner"] h5 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h5 a, header[role="banner"] h6 .item-list ul.pager li a, .item-list ul.pager li header[role="banner"] h6 a, .item-list ul.pager li header[role="banner"] blockquote p a, .item-list ul.pager li blockquote header[role="banner"] p a, .item-list header[role="banner"] blockquote ul.pager li a, blockquote header[role="banner"] .item-list ul.pager li a, .item-list blockquote header[role="banner"] ul.pager li a, .item-list ul.pager li header[role="banner"] blockquote ol a, .item-list ul.pager li blockquote header[role="banner"] ol a, .item-list ul.pager li header[role="banner"] blockquote table td a, .item-list ul.pager li blockquote table header[role="banner"] td a, .item-list ul.pager li header[role="banner"] table blockquote td a, .item-list ul.pager li table blockquote header[role="banner"] td a, .item-list ul.pager li header[role="banner"] blockquote table th a, .item-list ul.pager li blockquote table header[role="banner"] th a, .item-list ul.pager li header[role="banner"] table blockquote th a, .item-list ul.pager li table blockquote header[role="banner"] th a, .item-list ul.pager li header[role="banner"] blockquote cite a, .item-list ul.pager li blockquote header[role="banner"] cite a, header[role="banner"] blockquote .item-list ul.pager li a, blockquote .item-list ul.pager header[role="banner"] li a, header[role="banner"] .item-list ul.pager blockquote li a, .item-list ul.pager blockquote header[role="banner"] li a {
+          font-size: 18pt; } }
+
+/* Main navigation */
+nav.main {
+  text-shadow: 1px 1px 1px white;
+  background-color: #E2EAE5;
+  -webkit-box-shadow: inset 3px #898980 5px #000000;
+  -moz-box-shadow: inset 3px #898980 5px #000000;
+  -o-box-shadow: inset 3px #898980 5px #000000;
+  box-shadow: inset 3px #898980 5px #000000;
+  min-height: 2.3em;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: transparent rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25); }
+  nav.main .wrap {
+    width: 100%; }
+  @media screen and (min-width: 780px) {
+    nav.main {
+      background-image: -o-linear-gradient(transparent 90%, rgba(0, 0, 0, 0.1)), -o-linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.35) 50%, transparent 50%);
+      background-image: -webkit-linear-gradient(transparent 90%, rgba(0, 0, 0, 0.1)), -webkit-linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.35) 50%, transparent 50%);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.9, transparent), to(rgba(0, 0, 0, 0.1))), -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), color-stop(0.5, rgba(255, 255, 255, 0.35)), color-stop(0.5, transparent), to(transparent));
+      background-image: -moz-linear-gradient(transparent 90%, rgba(0, 0, 0, 0.1)), -moz-linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.35) 50%, transparent 50%); }
+      nav.main .wrap {
+        width: 90%; } }
+  nav.main ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%; }
+    @media screen and (min-width: 780px) {
+      nav.main ul {
+        border-left: 1px solid #c9cfcc; } }
+    nav.main ul li {
+      display: block;
+      padding: 0.5em 5%;
+      margin: 0;
+      font-family: "DIN Medium", "Helvetica Neue", Arial, sans-serif;
+      font-size: 10pt;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-family: "DIN Bold", "Helvetica Neue", Arial, sans-serif;
+      border-top: 1px solid #f9fffc;
+      border-bottom: 1px solid #c9cfcc; }
+      @media screen and (min-width: 780px) {
+        nav.main ul li {
+          float: left;
+          padding: 0.5em 0.75em;
+          border-left: 1px solid #f9fffc;
+          border-right: 1px solid #c9cfcc;
+          border-top: 0;
+          border-bottom: 0; } }
+      @media screen and (min-width: 1050px) {
+        nav.main ul li {
+          padding: 0.5em 1.5em;
+          font-size: 11pt; } }
+      @media screen and (min-width: 1400px) {
+        nav.main ul li {
+          padding: 0.5em 2em; } }
+      nav.main ul li a, nav.main .item-list ul.pager li a, .item-list nav.main ul.pager li a {
+        color: #3D4A43;
+        text-decoration: none; }
+        nav.main ul li a:hover {
+          color: #007D3F; }
+        nav.main ul li a.active {
+          color: #007D3F; }
+      nav.main ul li.active-trail {
+        background-color: rgba(255, 255, 255, 0.5); }
+
+/* Home page features */
+.feature {
+  padding-top: 0.8em;
+  position: relative; }
+  .feature img {
+    width: 100%;
+    display: block; }
+  .feature ul.slides {
+    line-height: 0; }
+    .feature ul.slides li {
+      position: relative; }
+  .feature .caption {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), #fff) repeat scroll 0 0 transparent;
+    font-style: normal; }
+    .feature .caption h3, .feature .caption table.views-table th, table.views-table .feature .caption th, .feature .caption table.cms th, table.cms .feature .caption th, .feature .caption .field-field-course-number .field-item, .field-field-course-number .feature .caption .field-item, .feature .caption h4, .feature .caption h5, .feature .caption h6, .feature .caption blockquote p, blockquote .feature .caption p, .feature .caption blockquote ul, blockquote .feature .caption ul, .feature .caption blockquote ol, blockquote .feature .caption ol, .feature .caption blockquote table td, blockquote table .feature .caption td, .feature .caption table blockquote td, table blockquote .feature .caption td, .feature .caption blockquote table th, blockquote table .feature .caption th, .feature .caption table blockquote th, table blockquote .feature .caption th, .feature .caption blockquote cite, blockquote .feature .caption cite, .feature .caption blockquote .caption, blockquote .feature .caption .caption, .feature .caption blockquote .meat .breadcrumb, blockquote .meat .feature .caption .breadcrumb, .feature .caption .meat blockquote .breadcrumb, .meat blockquote .feature .caption .breadcrumb, .feature .caption blockquote .field, blockquote .feature .caption .field, .feature .caption blockquote div.fieldgroup.group-details .content .field, blockquote div.fieldgroup.group-details .content .feature .caption .field, .feature .caption div.fieldgroup.group-details .content blockquote .field, div.fieldgroup.group-details .content blockquote .feature .caption .field, .feature .caption blockquote div.fieldgroup.group-info .content .field, blockquote div.fieldgroup.group-info .content .feature .caption .field, .feature .caption div.fieldgroup.group-info .content blockquote .field, div.fieldgroup.group-info .content blockquote .feature .caption .field, .feature .caption blockquote .item-list ul.pager li, blockquote .item-list ul.pager .feature .caption li, .feature .caption .item-list ul.pager blockquote li, .item-list ul.pager blockquote .feature .caption li, .feature .caption h2, .feature .caption table.views-table caption, table.views-table .feature .caption caption, .feature .caption table.cms caption, table.cms .feature .caption caption {
+      margin: 0.5em 0.5em 0; }
+      .feature .caption h3 a, .feature .caption table.views-table th a, table.views-table .feature .caption th a, .feature .caption table.cms th a, table.cms .feature .caption th a, .feature .caption .field-field-course-number .field-item a, .field-field-course-number .feature .caption .field-item a, .feature .caption h4 a, .feature .caption h5 a, .feature .caption h6 a, .feature .caption blockquote p a, blockquote .feature .caption p a, .feature .caption blockquote ul a, blockquote .feature .caption ul a, .feature .caption blockquote ol a, blockquote .feature .caption ol a, .feature .caption blockquote table td a, blockquote table .feature .caption td a, .feature .caption table blockquote td a, table blockquote .feature .caption td a, .feature .caption blockquote table th a, blockquote table .feature .caption th a, .feature .caption table blockquote th a, table blockquote .feature .caption th a, .feature .caption blockquote cite a, blockquote .feature .caption cite a, .feature .caption blockquote .caption a, blockquote .feature .caption .caption a, .feature .caption blockquote .meat .breadcrumb a, blockquote .meat .feature .caption .breadcrumb a, .feature .caption .meat blockquote .breadcrumb a, .meat blockquote .feature .caption .breadcrumb a, .feature .caption blockquote .field a, blockquote .feature .caption .field a, .feature .caption blockquote div.fieldgroup.group-details .content .field a, blockquote div.fieldgroup.group-details .content .feature .caption .field a, .feature .caption div.fieldgroup.group-details .content blockquote .field a, div.fieldgroup.group-details .content blockquote .feature .caption .field a, .feature .caption blockquote div.fieldgroup.group-info .content .field a, blockquote div.fieldgroup.group-info .content .feature .caption .field a, .feature .caption div.fieldgroup.group-info .content blockquote .field a, div.fieldgroup.group-info .content blockquote .feature .caption .field a, .feature .caption h2 a, .feature .caption table.views-table caption a, table.views-table .feature .caption caption a, .feature .caption table.cms caption a, table.cms .feature .caption caption a, .feature .caption h3 .item-list ul.pager li a, .item-list ul.pager li .feature .caption h3 a, .feature .caption h4 .item-list ul.pager li a, .item-list ul.pager li .feature .caption h4 a, .feature .caption h5 .item-list ul.pager li a, .item-list ul.pager li .feature .caption h5 a, .feature .caption h6 .item-list ul.pager li a, .item-list ul.pager li .feature .caption h6 a, blockquote .item-list ul.pager .feature .caption li a, .feature .caption .item-list ul.pager blockquote li a, .item-list ul.pager blockquote .feature .caption li a, .feature .caption h2 .item-list ul.pager li a, .item-list ul.pager li .feature .caption h2 a {
+        color: #007D3F;
+        text-decoration: none; }
+        .feature .caption h3 a:hover, .feature .caption table.views-table th a:hover, table.views-table .feature .caption th a:hover, .feature .caption table.cms th a:hover, table.cms .feature .caption th a:hover, .feature .caption .field-field-course-number .field-item a:hover, .field-field-course-number .feature .caption .field-item a:hover, .feature .caption h4 a:hover, .feature .caption h5 a:hover, .feature .caption h6 a:hover, .feature .caption blockquote p a:hover, blockquote .feature .caption p a:hover, .feature .caption blockquote ul a:hover, blockquote .feature .caption ul a:hover, .feature .caption blockquote ol a:hover, blockquote .feature .caption ol a:hover, .feature .caption blockquote table td a:hover, blockquote table .feature .caption td a:hover, .feature .caption table blockquote td a:hover, table blockquote .feature .caption td a:hover, .feature .caption blockquote table th a:hover, blockquote table .feature .caption th a:hover, .feature .caption table blockquote th a:hover, table blockquote .feature .caption th a:hover, .feature .caption blockquote cite a:hover, blockquote .feature .caption cite a:hover, .feature .caption blockquote .caption a:hover, blockquote .feature .caption .caption a:hover, .feature .caption blockquote .meat .breadcrumb a:hover, blockquote .meat .feature .caption .breadcrumb a:hover, .feature .caption .meat blockquote .breadcrumb a:hover, .meat blockquote .feature .caption .breadcrumb a:hover, .feature .caption blockquote .field a:hover, blockquote .feature .caption .field a:hover, .feature .caption h2 a:hover, .feature .caption table.views-table caption a:hover, table.views-table .feature .caption caption a:hover, .feature .caption table.cms caption a:hover, table.cms .feature .caption caption a:hover, blockquote .item-list ul.pager .feature .caption li a:hover, .feature .caption .item-list ul.pager blockquote li a:hover, .item-list ul.pager blockquote .feature .caption li a:hover {
+          text-decoration: underline; }
+    .feature .caption p, .feature .caption ul, .feature .caption ol, .feature .caption table td, table .feature .caption td, .feature .caption table th, table .feature .caption th, .feature .caption cite, .feature .caption .caption, .feature .caption .meat .breadcrumb, .meat .feature .caption .breadcrumb, .feature .caption .field, .feature .caption div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content .feature .caption .field, .feature .caption div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content .feature .caption .field, .feature .caption .item-list ul.pager li, .item-list ul.pager .feature .caption li {
+      margin: 0 0.5em 0.5em; }
+
+/* Content */
+.meat {
+  background-color: #F2F5F3;
+  border-bottom: 1px solid #DDD;
+  padding-bottom: 5%;
+  -webkit-box-shadow: inset 0 0 5px #DDD;
+  -moz-box-shadow: inset 0 0 5px #DDD;
+  -o-box-shadow: inset 0 0 5px #DDD;
+  box-shadow: inset 0 0 5px #DDD;
+  /* Breadcrumb */
+  /* Divide */
+  /* Subnavigation - Second level */ }
+  @media screen and (min-width: 900px) {
+    .meat {
+      padding-bottom: 3%; } }
+  .meat .breadcrumb {
+    color: #858585;
+    font-size: 10pt;
+    padding: 1.5em 0 0; }
+    .meat .breadcrumb a, .meat .breadcrumb .item-list ul.pager li a, .item-list ul.pager li .meat .breadcrumb a {
+      text-decoration: none; }
+      .meat .breadcrumb a:hover {
+        text-decoration: underline; }
+  .meat section, .meat aside, .meat .leftcol {
+    padding-top: 1.5em; }
+    .meat section .button, .meat aside .button, .meat .leftcol .button {
+      display: block;
+      text-align: left; }
+  .meat .divide {
+    margin-top: 1.5em; }
+  @media screen and (min-width: 700px) {
+    .meat section {
+      width: 48.47%;
+      float: left; }
+    .meat aside, .meat .leftcol {
+      width: 48.47%;
+      float: right;
+      margin-left: 3.03%; }
+    .meat aside {
+      clear: right; }
+    .meat .leftcol {
+      margin-right: 0; } }
+  @media screen and (min-width: 900px) {
+    .meat section {
+      width: 74.22%;
+      float: left; }
+    .meat aside, .meat .leftcol {
+      width: 22.72%;
+      float: right;
+      margin-left: 3.03%; }
+    .meat aside {
+      clear: right; }
+    .meat .leftcol {
+      margin-right: 0; }
+    .meat .divide {
+      /* Divide main column into 2 */
+      width: 48.47%;
+      float: left;
+      margin-top: 0; }
+    .meat .divide.first {
+      margin-right: 3.03%; } }
+  @media screen and (min-width: 1100px) {
+    .meat section, .meat .divide {
+      width: 48.47%;
+      float: left; }
+    .meat aside, .meat .leftcol {
+      width: 22.72%;
+      float: left;
+      margin-left: 3.03%; }
+    .meat .leftcol {
+      margin-left: 0;
+      margin-right: 3.03%; }
+    .meat .divide.first {
+      margin-right: 3.03%; }
+    .meat.full {
+      /* Content 75% width */ }
+      .meat.full section {
+        float: right;
+        width: 74.22%;
+        margin-top: 0; } }
+  .meat .divide h2, .meat .divide h3, .meat .divide table.views-table th, table.views-table .meat .divide th, .meat .divide table.cms th, table.cms .meat .divide th, .meat .divide .field-field-course-number .field-item, .field-field-course-number .meat .divide .field-item, .meat .divide h4, .meat .divide h5, .meat .divide h6, .meat .divide blockquote p, blockquote .meat .divide p, .meat .divide blockquote ul, blockquote .meat .divide ul, .meat .divide blockquote ol, blockquote .meat .divide ol, .meat .divide blockquote table td, blockquote table .meat .divide td, .meat .divide table blockquote td, table blockquote .meat .divide td, .meat .divide blockquote table th, blockquote table .meat .divide th, .meat .divide table blockquote th, table blockquote .meat .divide th, .meat .divide blockquote cite, blockquote .meat .divide cite, .meat .divide blockquote .caption, blockquote .meat .divide .caption, blockquote .meat .divide .breadcrumb, .meat .divide blockquote .breadcrumb, .meat blockquote .divide .breadcrumb, .meat .divide blockquote .field, blockquote .meat .divide .field, .meat .divide blockquote div.fieldgroup.group-details .content .field, blockquote div.fieldgroup.group-details .content .meat .divide .field, .meat .divide div.fieldgroup.group-details .content blockquote .field, div.fieldgroup.group-details .content blockquote .meat .divide .field, .meat .divide blockquote div.fieldgroup.group-info .content .field, blockquote div.fieldgroup.group-info .content .meat .divide .field, .meat .divide div.fieldgroup.group-info .content blockquote .field, div.fieldgroup.group-info .content blockquote .meat .divide .field, .meat .divide blockquote .item-list ul.pager li, blockquote .item-list ul.pager .meat .divide li, .meat .divide .item-list ul.pager blockquote li, .item-list ul.pager blockquote .meat .divide li, .meat .divide table.views-table caption, table.views-table .meat .divide caption, .meat .divide table.cms caption, table.cms .meat .divide caption {
+    font-size: 14pt; }
+    @media screen and (min-width: 1200px) {
+      .meat .divide h2, .meat .divide h3, .meat .divide table.views-table th, table.views-table .meat .divide th, .meat .divide table.cms th, table.cms .meat .divide th, .meat .divide .field-field-course-number .field-item, .field-field-course-number .meat .divide .field-item, .meat .divide h4, .meat .divide h5, .meat .divide h6, .meat .divide blockquote p, blockquote .meat .divide p, .meat .divide blockquote ul, blockquote .meat .divide ul, .meat .divide blockquote ol, blockquote .meat .divide ol, .meat .divide blockquote table td, blockquote table .meat .divide td, .meat .divide table blockquote td, table blockquote .meat .divide td, .meat .divide blockquote table th, blockquote table .meat .divide th, .meat .divide table blockquote th, table blockquote .meat .divide th, .meat .divide blockquote cite, blockquote .meat .divide cite, .meat .divide blockquote .caption, blockquote .meat .divide .caption, blockquote .meat .divide .breadcrumb, .meat .divide blockquote .breadcrumb, .meat blockquote .divide .breadcrumb, .meat .divide blockquote .field, blockquote .meat .divide .field, .meat .divide blockquote div.fieldgroup.group-details .content .field, blockquote div.fieldgroup.group-details .content .meat .divide .field, .meat .divide div.fieldgroup.group-details .content blockquote .field, div.fieldgroup.group-details .content blockquote .meat .divide .field, .meat .divide blockquote div.fieldgroup.group-info .content .field, blockquote div.fieldgroup.group-info .content .meat .divide .field, .meat .divide div.fieldgroup.group-info .content blockquote .field, div.fieldgroup.group-info .content blockquote .meat .divide .field, .meat .divide blockquote .item-list ul.pager li, blockquote .item-list ul.pager .meat .divide li, .meat .divide .item-list ul.pager blockquote li, .item-list ul.pager blockquote .meat .divide li, .meat .divide table.views-table caption, table.views-table .meat .divide caption, .meat .divide table.cms caption, table.cms .meat .divide caption {
+        font-size: 15pt; } }
+  .meat h2.subnav, .meat h3.subnav, .meat table.views-table th.subnav, table.views-table .meat th.subnav, .meat table.cms th.subnav, table.cms .meat th.subnav, .meat .field-field-course-number .subnav.field-item, .field-field-course-number .meat .subnav.field-item, .meat h4.subnav, .meat h5.subnav, .meat h6.subnav, .meat blockquote p.subnav, blockquote .meat p.subnav, .meat blockquote ul.subnav, blockquote .meat ul.subnav, .meat blockquote ol.subnav, blockquote .meat ol.subnav, .meat blockquote table td.subnav, blockquote table .meat td.subnav, .meat table blockquote td.subnav, table blockquote .meat td.subnav, .meat blockquote table th.subnav, blockquote table .meat th.subnav, .meat table blockquote th.subnav, table blockquote .meat th.subnav, .meat blockquote cite.subnav, blockquote .meat cite.subnav, .meat blockquote .subnav.caption, blockquote .meat .subnav.caption, blockquote .meat .subnav.breadcrumb, .meat blockquote .subnav.breadcrumb, .meat blockquote .subnav.field, blockquote .meat .subnav.field, .meat blockquote div.fieldgroup.group-details .content .subnav.field, blockquote div.fieldgroup.group-details .content .meat .subnav.field, .meat div.fieldgroup.group-details .content blockquote .subnav.field, div.fieldgroup.group-details .content blockquote .meat .subnav.field, .meat blockquote div.fieldgroup.group-info .content .subnav.field, blockquote div.fieldgroup.group-info .content .meat .subnav.field, .meat div.fieldgroup.group-info .content blockquote .subnav.field, div.fieldgroup.group-info .content blockquote .meat .subnav.field, .meat blockquote .item-list ul.pager li.subnav, blockquote .item-list ul.pager .meat li.subnav, .meat .item-list ul.pager blockquote li.subnav, .item-list ul.pager blockquote .meat li.subnav, .meat table.views-table caption.subnav, table.views-table .meat caption.subnav, .meat table.cms caption.subnav, table.cms .meat caption.subnav {
+    display: block;
+    width: 100%;
+    float: none;
+    padding-top: 0;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #DDD;
+    margin-bottom: -0.5em; }
+    @media screen and (min-width: 700px) {
+      .meat h2.subnav, .meat h3.subnav, .meat table.views-table th.subnav, table.views-table .meat th.subnav, .meat table.cms th.subnav, table.cms .meat th.subnav, .meat .field-field-course-number .subnav.field-item, .field-field-course-number .meat .subnav.field-item, .meat h4.subnav, .meat h5.subnav, .meat h6.subnav, .meat blockquote p.subnav, blockquote .meat p.subnav, .meat blockquote ul.subnav, blockquote .meat ul.subnav, .meat blockquote ol.subnav, blockquote .meat ol.subnav, .meat blockquote table td.subnav, blockquote table .meat td.subnav, .meat table blockquote td.subnav, table blockquote .meat td.subnav, .meat blockquote table th.subnav, blockquote table .meat th.subnav, .meat table blockquote th.subnav, table blockquote .meat th.subnav, .meat blockquote cite.subnav, blockquote .meat cite.subnav, .meat blockquote .subnav.caption, blockquote .meat .subnav.caption, blockquote .meat .subnav.breadcrumb, .meat blockquote .subnav.breadcrumb, .meat blockquote .subnav.field, blockquote .meat .subnav.field, .meat blockquote div.fieldgroup.group-details .content .subnav.field, blockquote div.fieldgroup.group-details .content .meat .subnav.field, .meat div.fieldgroup.group-details .content blockquote .subnav.field, div.fieldgroup.group-details .content blockquote .meat .subnav.field, .meat blockquote div.fieldgroup.group-info .content .subnav.field, blockquote div.fieldgroup.group-info .content .meat .subnav.field, .meat div.fieldgroup.group-info .content blockquote .subnav.field, div.fieldgroup.group-info .content blockquote .meat .subnav.field, .meat blockquote .item-list ul.pager li.subnav, blockquote .item-list ul.pager .meat li.subnav, .meat .item-list ul.pager blockquote li.subnav, .item-list ul.pager blockquote .meat li.subnav, .meat table.views-table caption.subnav, table.views-table .meat caption.subnav, .meat table.cms caption.subnav, table.cms .meat caption.subnav {
+        margin-left: 0; } }
+  .meat .subnav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    /* Third level */
+    /* Fourth level */ }
+    .meat .subnav ul li {
+      font-size: 10pt; }
+      @media screen and (min-width: 1200px) {
+        .meat .subnav ul li {
+          font-size: 11pt; } }
+      .meat .subnav ul li a {
+        display: block;
+        border-bottom: 1px solid #DDD;
+        padding: 0.4em;
+        margin: 0;
+        text-decoration: none; }
+        .meat .subnav ul li a:visited {
+          color: #007D3F; }
+        .meat .subnav ul li a:hover {
+          color: #000;
+          text-decoration: underline;
+          background-color: rgba(255, 245, 184, 0.15);
+          border: 1px solid #E1D8A4;
+          /* Rounded box */
+          -webkit-border-radius: 6px;
+          -moz-border-radius: 6px;
+          -o-border-radius: 6px;
+          border-radius: 6px;
+          margin: -1px -1px 0 -1px; }
+        .meat .subnav ul li a.active {
+          color: #fff;
+          font-weight: bold;
+          background: linear-gradient(135deg, #00a355, #008a47) repeat scroll 0 0 transparent;
+          /* Rounded box */
+          -webkit-border-radius: 6px;
+          -moz-border-radius: 6px;
+          -o-border-radius: 6px;
+          border-radius: 6px; }
+      .meat .subnav ul li.expanded.active-trail a, .meat .subnav ul li.expanded.active-trail a.active {
+        font-weight: bold; }
+      .meat .subnav ul li.expanded.active-trail ul li a {
+        font-weight: normal; }
+      .meat .subnav ul li.expanded.active-trail ul li.expanded.active-trail a, .meat .subnav ul li.expanded.active-trail ul li.expanded.active-trail a.active {
+        font-weight: bold; }
+      .meat .subnav ul li.expanded.active-trail ul li.expanded.active-trail ul li a {
+        font-weight: normal; }
+      .meat .subnav ul li.leaf, .meat .subnav ul li.expanded, .meat .subnav ul li.collapsed {
+        list-style-image: none;
+        list-style-type: none;
+        padding: 0; }
+      .meat .subnav ul li.collapsed {
+        background: url("") no-repeat 50% right; }
+    .meat .subnav ul ul li a {
+      padding-left: 1.5em; }
+    .meat .subnav ul ul ul li a {
+      padding-left: 3em; }
+
+/* Footer */
+footer {
+  overflow: hidden;
+  /* Light tan bar */
+  /* Green bar */ }
+  footer p, footer ul, footer ol, footer table td, table footer td, footer table th, table footer th, footer cite, footer blockquote p cite, blockquote p footer cite, footer .caption, footer .meat .breadcrumb, .meat footer .breadcrumb, footer .field, footer div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content footer .field, footer div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content footer .field, footer .item-list ul.pager li, .item-list ul.pager footer li {
+    font-size: 10pt; }
+    @media screen and (min-width: 1200px) {
+      footer p, footer ul, footer ol, footer table td, table footer td, footer table th, table footer th, footer cite, footer blockquote p cite, blockquote p footer cite, footer .caption, footer .meat .breadcrumb, .meat footer .breadcrumb, footer .field, footer div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content footer .field, footer div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content footer .field, footer .item-list ul.pager li, .item-list ul.pager footer li {
+        font-size: 11pt; } }
+  footer .top-foot {
+    background-color: #F2F2E7;
+    padding: 1em 0;
+    -webkit-box-shadow: inset 0 0 3px #b2b2b2;
+    -moz-box-shadow: inset 0 0 3px #b2b2b2;
+    -o-box-shadow: inset 0 0 3px #b2b2b2;
+    box-shadow: inset 0 0 3px #b2b2b2; }
+    footer .top-foot h6 {
+      padding-bottom: 0.2em;
+      margin-bottom: 0;
+      border-bottom: 1px solid #DDD; }
+    @media screen and (min-width: 540px) {
+      footer .top-foot section {
+        width: 48.47%;
+        float: left;
+        margin-right: 3.03%; }
+      footer .top-foot section.second {
+        margin-right: 0; } }
+    @media screen and (min-width: 900px) {
+      footer .top-foot section {
+        width: 48.47%;
+        float: left; }
+        footer .top-foot section .divide {
+          width: 46.97%;
+          float: left;
+          margin-right: 3.03%; } }
+  footer .bottom-foot {
+    background: url("../images/banner-bg.svg") no-repeat 10% 50%;
+    background-color: #007D3F;
+    border-top: 3px solid #FFDC0E;
+    -webkit-box-shadow: inset 5px #555555 5px #000000;
+    -moz-box-shadow: inset 5px #555555 5px #000000;
+    -o-box-shadow: inset 5px #555555 5px #000000;
+    box-shadow: inset 5px #555555 5px #000000; }
+    footer .bottom-foot ul.quicklinks {
+      margin: 1em 0 0;
+      padding: 0; }
+      footer .bottom-foot ul.quicklinks li {
+        float: left;
+        list-style: none;
+        margin: 0;
+        padding: 0 1em;
+        border-right: 1px solid #5DA380; }
+        footer .bottom-foot ul.quicklinks li a {
+          color: #fff; }
+        footer .bottom-foot ul.quicklinks li.first {
+          padding-left: 0; }
+        footer .bottom-foot ul.quicklinks li.last {
+          border-right: none; }
+    footer .bottom-foot p, footer .bottom-foot ul, footer .bottom-foot ol, footer .bottom-foot table td, table footer .bottom-foot td, footer .bottom-foot table th, table footer .bottom-foot th, footer .bottom-foot cite, footer .bottom-foot .caption, footer .bottom-foot .meat .breadcrumb, .meat footer .bottom-foot .breadcrumb, footer .bottom-foot .field, footer .bottom-foot div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content footer .bottom-foot .field, footer .bottom-foot div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content footer .bottom-foot .field, footer .bottom-foot .item-list ul.pager li, .item-list ul.pager footer .bottom-foot li {
+      color: #fff; }
+      footer .bottom-foot p.hangright, footer .bottom-foot ul.hangright, footer .bottom-foot ol.hangright, footer .bottom-foot table td.hangright, table footer .bottom-foot td.hangright, footer .bottom-foot table th.hangright, table footer .bottom-foot th.hangright, footer .bottom-foot cite.hangright, footer .bottom-foot .hangright.caption, footer .bottom-foot .meat .hangright.breadcrumb, .meat footer .bottom-foot .hangright.breadcrumb, footer .bottom-foot .hangright.field, footer .bottom-foot div.fieldgroup.group-details .content .hangright.field, div.fieldgroup.group-details .content footer .bottom-foot .hangright.field, footer .bottom-foot div.fieldgroup.group-info .content .hangright.field, div.fieldgroup.group-info .content footer .bottom-foot .hangright.field, footer .bottom-foot .item-list ul.pager li.hangright, .item-list ul.pager footer .bottom-foot li.hangright {
+        float: left; }
+  footer #printfooter {
+    display: none; }
+
+/* Extrude - contained in block */
+.extrude {
+  background: none repeat scroll 0 0 #fff;
+  box-shadow: 0 1px 4px rgba(0, 30, 15, 0.2);
+  padding: 0.5em 0.8em;
+  margin-top: 1em; }
+  .extrude h3, .extrude table.views-table th, table.views-table .extrude th, .extrude table.cms th, table.cms .extrude th, .extrude .field-field-course-number .field-item, .field-field-course-number .extrude .field-item, .extrude h4, .extrude h5, .extrude h6, .extrude blockquote p, blockquote .extrude p, .extrude blockquote ul, blockquote .extrude ul, .extrude blockquote ol, blockquote .extrude ol, .extrude blockquote table td, blockquote table .extrude td, .extrude table blockquote td, table blockquote .extrude td, .extrude blockquote table th, blockquote table .extrude th, .extrude table blockquote th, table blockquote .extrude th, .extrude blockquote cite, blockquote .extrude cite, .extrude blockquote .caption, blockquote .extrude .caption, .extrude blockquote .meat .breadcrumb, blockquote .meat .extrude .breadcrumb, .extrude .meat blockquote .breadcrumb, .meat blockquote .extrude .breadcrumb, .extrude blockquote .field, blockquote .extrude .field, .extrude blockquote div.fieldgroup.group-details .content .field, blockquote div.fieldgroup.group-details .content .extrude .field, .extrude div.fieldgroup.group-details .content blockquote .field, div.fieldgroup.group-details .content blockquote .extrude .field, .extrude blockquote div.fieldgroup.group-info .content .field, blockquote div.fieldgroup.group-info .content .extrude .field, .extrude div.fieldgroup.group-info .content blockquote .field, div.fieldgroup.group-info .content blockquote .extrude .field, .extrude blockquote .item-list ul.pager li, blockquote .item-list ul.pager .extrude li, .extrude .item-list ul.pager blockquote li, .item-list ul.pager blockquote .extrude li, .extrude .feature .caption h2, .feature .caption .extrude h2, .extrude h2, .extrude table.views-table caption, table.views-table .extrude caption, .extrude table.cms caption, table.cms .extrude caption {
+    display: block;
+    font-family: "DIN Medium", "Helvetica Neue", Arial, sans-serif;
+    background-image: linear-gradient(to bottom, #fff, #eef3f0);
+    background-repeat: repeat-x;
+    border-bottom: 1px solid #dfe9e3;
+    border-radius: 3px 3px 0 0;
+    padding: 0.7143em 0.68em 0.35714em;
+    margin: -0.8em -0.8em 1em;
+    text-shadow: 1px 1px 0 #fff; }
+    .extrude h3 a, .extrude table.views-table th a, table.views-table .extrude th a, .extrude table.cms th a, table.cms .extrude th a, .extrude .field-field-course-number .field-item a, .field-field-course-number .extrude .field-item a, .extrude h4 a, .extrude h5 a, .extrude h6 a, .extrude blockquote p a, blockquote .extrude p a, .extrude blockquote ul a, blockquote .extrude ul a, .extrude blockquote ol a, blockquote .extrude ol a, .extrude blockquote table td a, blockquote table .extrude td a, .extrude table blockquote td a, table blockquote .extrude td a, .extrude blockquote table th a, blockquote table .extrude th a, .extrude table blockquote th a, table blockquote .extrude th a, .extrude blockquote cite a, blockquote .extrude cite a, .extrude blockquote .caption a, blockquote .extrude .caption a, .extrude blockquote .meat .breadcrumb a, blockquote .meat .extrude .breadcrumb a, .extrude .meat blockquote .breadcrumb a, .meat blockquote .extrude .breadcrumb a, .extrude blockquote .field a, blockquote .extrude .field a, .extrude blockquote div.fieldgroup.group-details .content .field a, blockquote div.fieldgroup.group-details .content .extrude .field a, .extrude div.fieldgroup.group-details .content blockquote .field a, div.fieldgroup.group-details .content blockquote .extrude .field a, .extrude blockquote div.fieldgroup.group-info .content .field a, blockquote div.fieldgroup.group-info .content .extrude .field a, .extrude div.fieldgroup.group-info .content blockquote .field a, div.fieldgroup.group-info .content blockquote .extrude .field a, .extrude .feature .caption h2 a, .feature .caption .extrude h2 a, .extrude h2 a, .extrude table.views-table caption a, table.views-table .extrude caption a, .extrude table.cms caption a, table.cms .extrude caption a, .extrude h3 .item-list ul.pager li a, .item-list ul.pager li .extrude h3 a, .extrude h4 .item-list ul.pager li a, .item-list ul.pager li .extrude h4 a, .extrude h5 .item-list ul.pager li a, .item-list ul.pager li .extrude h5 a, .extrude h6 .item-list ul.pager li a, .item-list ul.pager li .extrude h6 a, .item-list ul.pager li .extrude blockquote p a, .item-list ul.pager li blockquote .extrude p a, .item-list .extrude blockquote ul.pager li a, blockquote .extrude .item-list ul.pager li a, .item-list blockquote .extrude ul.pager li a, .item-list ul.pager li .extrude blockquote ol a, .item-list ul.pager li blockquote .extrude ol a, .item-list ul.pager li .extrude blockquote table td a, .item-list ul.pager li blockquote table .extrude td a, .item-list ul.pager li .extrude table blockquote td a, .item-list ul.pager li table blockquote .extrude td a, .item-list ul.pager li .extrude blockquote table th a, .item-list ul.pager li blockquote table .extrude th a, .item-list ul.pager li .extrude table blockquote th a, .item-list ul.pager li table blockquote .extrude th a, .item-list ul.pager li .extrude blockquote cite a, .item-list ul.pager li blockquote .extrude cite a, .item-list ul.pager li .extrude blockquote .caption a, .item-list ul.pager li blockquote .extrude .caption a, .item-list ul.pager li .extrude blockquote .field a, .item-list ul.pager li blockquote .extrude .field a, .extrude blockquote .item-list ul.pager li a, blockquote .item-list ul.pager .extrude li a, .extrude .item-list ul.pager blockquote li a, .item-list ul.pager blockquote .extrude li a, .extrude h2 .item-list ul.pager li a, .item-list ul.pager li .extrude h2 a {
+      text-decoration: none;
+      color: #383838; }
+  .extrude.nobullet h3, .extrude.nobullet table.views-table th, table.views-table .extrude.nobullet th, .extrude.nobullet table.cms th, table.cms .extrude.nobullet th, .extrude.nobullet .field-field-course-number .field-item, .field-field-course-number .extrude.nobullet .field-item, .extrude.nobullet h4, .extrude.nobullet h5, .extrude.nobullet h6, .extrude.nobullet blockquote p, blockquote .extrude.nobullet p, .extrude.nobullet blockquote ul, blockquote .extrude.nobullet ul, .extrude.nobullet blockquote ol, blockquote .extrude.nobullet ol, .extrude.nobullet blockquote table td, blockquote table .extrude.nobullet td, .extrude.nobullet table blockquote td, table blockquote .extrude.nobullet td, .extrude.nobullet blockquote table th, blockquote table .extrude.nobullet th, .extrude.nobullet table blockquote th, table blockquote .extrude.nobullet th, .extrude.nobullet blockquote cite, blockquote .extrude.nobullet cite, .extrude.nobullet blockquote .caption, blockquote .extrude.nobullet .caption, .extrude.nobullet blockquote .meat .breadcrumb, blockquote .meat .extrude.nobullet .breadcrumb, .extrude.nobullet .meat blockquote .breadcrumb, .meat blockquote .extrude.nobullet .breadcrumb, .extrude.nobullet blockquote .field, blockquote .extrude.nobullet .field, .extrude.nobullet blockquote div.fieldgroup.group-details .content .field, blockquote div.fieldgroup.group-details .content .extrude.nobullet .field, .extrude.nobullet div.fieldgroup.group-details .content blockquote .field, div.fieldgroup.group-details .content blockquote .extrude.nobullet .field, .extrude.nobullet blockquote div.fieldgroup.group-info .content .field, blockquote div.fieldgroup.group-info .content .extrude.nobullet .field, .extrude.nobullet div.fieldgroup.group-info .content blockquote .field, div.fieldgroup.group-info .content blockquote .extrude.nobullet .field, .extrude.nobullet blockquote .item-list ul.pager li, blockquote .item-list ul.pager .extrude.nobullet li, .extrude.nobullet .item-list ul.pager blockquote li, .item-list ul.pager blockquote .extrude.nobullet li, .extrude.nobullet h2, .extrude.nobullet table.views-table caption, table.views-table .extrude.nobullet caption, .extrude.nobullet table.cms caption, table.cms .extrude.nobullet caption {
+    margin-bottom: 0; }
+  .extrude p, .extrude ul, .extrude ol, .extrude table td, table .extrude td, .extrude table th, table .extrude th, .extrude cite, .extrude .caption, .extrude .meat .breadcrumb, .meat .extrude .breadcrumb, .extrude .field, .extrude div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content .extrude .field, .extrude div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content .extrude .field, .extrude .item-list ul.pager li, .item-list ul.pager .extrude li {
+    font-size: 10pt;
+    line-height: 1.6em; }
+    @media screen and (min-width: 1200px) {
+      .extrude p, .extrude ul, .extrude ol, .extrude table td, table .extrude td, .extrude table th, table .extrude th, .extrude cite, .extrude .caption, .extrude .meat .breadcrumb, .meat .extrude .breadcrumb, .extrude .field, .extrude div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content .extrude .field, .extrude div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content .extrude .field, .extrude .item-list ul.pager li, .item-list ul.pager .extrude li {
+        font-size: 11pt; } }
+
+/* Accordion styling for program FAQs */
+dl#slider dd {
+  margin-bottom: 1em; }
+
+/* Drupal custom views */
+/* News/Event list */
+.nobullet .item-list ul {
+  margin: 0;
+  padding: 0;
+  font-size: 10pt; }
+  @media screen and (min-width: 1200px) {
+    .nobullet .item-list ul {
+      font-size: 11pt; } }
+  .nobullet .item-list ul li {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px dotted #DDD; }
+    .nobullet .item-list ul li .views-field-title a {
+      text-decoration: none; }
+    .nobullet .item-list ul li.views-row-last {
+      border-bottom: none; }
+.nobullet .view-footer {
+  /* Custom view footer */
+  padding: 0.8em;
+  font-weight: bold;
+  background-color: #e9eeeb;
+  border-bottom: 1px solid #DDD; }
+  .nobullet .view-footer p, .nobullet .view-footer ul, .nobullet .view-footer ol, .nobullet .view-footer table td, table .nobullet .view-footer td, .nobullet .view-footer table th, table .nobullet .view-footer th, .nobullet .view-footer cite, .nobullet .view-footer .caption, .nobullet .view-footer .meat .breadcrumb, .meat .nobullet .view-footer .breadcrumb, .nobullet .view-footer .field, .nobullet .view-footer div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content .nobullet .view-footer .field, .nobullet .view-footer div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content .nobullet .view-footer .field, .nobullet .view-footer .item-list ul.pager li, .item-list ul.pager .nobullet .view-footer li {
+    font-size: 10pt;
+    margin: 0; }
+    .nobullet .view-footer p a, .nobullet .view-footer ul a, .nobullet .view-footer ol a, .nobullet .view-footer table td a, table .nobullet .view-footer td a, .nobullet .view-footer table th a, table .nobullet .view-footer th a, .nobullet .view-footer cite a, .nobullet .view-footer .caption a, .nobullet .view-footer .meat .breadcrumb a, .meat .nobullet .view-footer .breadcrumb a, .nobullet .view-footer .field a, .nobullet .view-footer div.fieldgroup.group-details .content .field a, div.fieldgroup.group-details .content .nobullet .view-footer .field a, .nobullet .view-footer div.fieldgroup.group-info .content .field a, div.fieldgroup.group-info .content .nobullet .view-footer .field a, .item-list ul.pager li .nobullet .view-footer p a, .item-list .nobullet .view-footer ul.pager li a, .item-list ul.pager li .nobullet .view-footer ol a, .item-list ul.pager li .nobullet .view-footer cite a, .nobullet .view-footer .item-list ul.pager li a, .item-list ul.pager .nobullet .view-footer li a {
+      text-decoration: none; }
+  .nobullet .view-footer:hover {
+    background-color: #e1e8e3; }
+.nobullet.extrude .view-footer {
+  margin: 0 -0.8em -0.5em;
+  background-color: #eef3f0;
+  border-top: 1px solid #dfe9e3; }
+  .nobullet.extrude .view-footer:hover {
+    background-color: #FFF5B8;
+    /* Light yellow */
+    border-top: 1px solid #ffee85; }
+
+/* News/Event category */
+.category, .field-field-eventtype, .field-field-category {
+  font-family: "DIN Medium", "Helvetica Neue", Arial, sans-serif;
+  font-size: 10pt;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #858585; }
+  @media screen and (min-width: 1200px) {
+    .category, .field-field-eventtype, .field-field-category {
+      font-size: 11pt; } }
+
+/* Event calendar */
+.calendar-calendar table th.days {
+  font-size: 9pt;
+  line-height: 1em;
+  padding: 0.5em; }
+.calendar-calendar table td {
+  font-size: 9pt;
+  line-height: 1.2em; }
+  .calendar-calendar table td .inner .view-field a {
+    color: #007D3F; }
+  .calendar-calendar table td .inner div {
+    background: none; }
+  .calendar-calendar table td .inner div.calendar div, .calendar-calendar table td .inner div.calendar div a {
+    background-color: #FFF5B8;
+    /* Light yellow */ }
+  .calendar-calendar table td .inner div.day {
+    padding: 0.25em; }
+    .calendar-calendar table td .inner div.day a {
+      color: #007D3F; }
+  .calendar-calendar table td.calendar-agenda-hour {
+    padding: 0.25em; }
+    .calendar-calendar table td.calendar-agenda-hour .calendar-hour, .calendar-calendar table td.calendar-agenda-hour .calendar-ampm {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 10pt -1; }
+.calendar-calendar tr td.today, .calendar-calendar tr.odd td.today, .calendar-calendar tr.even td.today {
+  background-color: #F2F2E7; }
+.calendar-calendar div.date-nav {
+  padding: 0.4em; }
+  .calendar-calendar div.date-nav .date-prev, .calendar-calendar div.date-nav .date-next {
+    font-size: 10pt; }
+.calendar-calendar .day-view div.calendar {
+  font-size: 9pt;
+  line-height: 1.3em; }
+
+/* Calendar popup */
+div#calpopup-body h1, div#calpopup-body h2, div#calpopup-body h3, div#calpopup-body table.views-table th, table.views-table div#calpopup-body th, div#calpopup-body table.cms th, table.cms div#calpopup-body th, div#calpopup-body .field-field-course-number .field-item, .field-field-course-number div#calpopup-body .field-item, div#calpopup-body h4, div#calpopup-body h5, div#calpopup-body h6, div#calpopup-body blockquote p, blockquote div#calpopup-body p, div#calpopup-body blockquote ul, blockquote div#calpopup-body ul, div#calpopup-body blockquote ol, blockquote div#calpopup-body ol, div#calpopup-body blockquote table td, blockquote table div#calpopup-body td, div#calpopup-body table blockquote td, table blockquote div#calpopup-body td, div#calpopup-body blockquote table th, blockquote table div#calpopup-body th, div#calpopup-body table blockquote th, table blockquote div#calpopup-body th, div#calpopup-body blockquote cite, blockquote div#calpopup-body cite, div#calpopup-body blockquote .caption, blockquote div#calpopup-body .caption, div#calpopup-body blockquote .meat .breadcrumb, blockquote .meat div#calpopup-body .breadcrumb, div#calpopup-body .meat blockquote .breadcrumb, .meat blockquote div#calpopup-body .breadcrumb, div#calpopup-body blockquote .field, blockquote div#calpopup-body .field, div#calpopup-body blockquote .item-list ul.pager li, blockquote .item-list ul.pager div#calpopup-body li, div#calpopup-body .item-list ul.pager blockquote li, .item-list ul.pager blockquote div#calpopup-body li, div#calpopup-body table.views-table caption, table.views-table div#calpopup-body caption, div#calpopup-body table.cms caption, table.cms div#calpopup-body caption {
+  font-size: 15pt; }
+  div#calpopup-body h1 a, div#calpopup-body h2 a, div#calpopup-body h3 a, div#calpopup-body table.views-table th a, table.views-table div#calpopup-body th a, div#calpopup-body table.cms th a, table.cms div#calpopup-body th a, div#calpopup-body .field-field-course-number .field-item a, .field-field-course-number div#calpopup-body .field-item a, div#calpopup-body h4 a, div#calpopup-body h5 a, div#calpopup-body h6 a, div#calpopup-body blockquote p a, blockquote div#calpopup-body p a, div#calpopup-body blockquote ul a, blockquote div#calpopup-body ul a, div#calpopup-body blockquote ol a, blockquote div#calpopup-body ol a, div#calpopup-body blockquote table td a, blockquote table div#calpopup-body td a, div#calpopup-body table blockquote td a, table blockquote div#calpopup-body td a, div#calpopup-body blockquote table th a, blockquote table div#calpopup-body th a, div#calpopup-body table blockquote th a, table blockquote div#calpopup-body th a, div#calpopup-body blockquote cite a, blockquote div#calpopup-body cite a, div#calpopup-body blockquote .caption a, blockquote div#calpopup-body .caption a, div#calpopup-body blockquote .meat .breadcrumb a, blockquote .meat div#calpopup-body .breadcrumb a, div#calpopup-body .meat blockquote .breadcrumb a, .meat blockquote div#calpopup-body .breadcrumb a, div#calpopup-body blockquote .field a, blockquote div#calpopup-body .field a, div#calpopup-body table.views-table caption a, table.views-table div#calpopup-body caption a, div#calpopup-body table.cms caption a, table.cms div#calpopup-body caption a, blockquote .item-list ul.pager div#calpopup-body li a, div#calpopup-body .item-list ul.pager blockquote li a, .item-list ul.pager blockquote div#calpopup-body li a {
+    text-decoration: none; }
+div#calpopup-body h2, div#calpopup-body h3, div#calpopup-body table.views-table th, table.views-table div#calpopup-body th, div#calpopup-body table.cms th, table.cms div#calpopup-body th, div#calpopup-body .field-field-course-number .field-item, .field-field-course-number div#calpopup-body .field-item, div#calpopup-body h4, div#calpopup-body h5, div#calpopup-body h6, div#calpopup-body blockquote p, blockquote div#calpopup-body p, div#calpopup-body blockquote ul, blockquote div#calpopup-body ul, div#calpopup-body blockquote ol, blockquote div#calpopup-body ol, div#calpopup-body blockquote table td, blockquote table div#calpopup-body td, div#calpopup-body table blockquote td, table blockquote div#calpopup-body td, div#calpopup-body blockquote table th, blockquote table div#calpopup-body th, div#calpopup-body table blockquote th, table blockquote div#calpopup-body th, div#calpopup-body blockquote cite, blockquote div#calpopup-body cite, div#calpopup-body blockquote .caption, blockquote div#calpopup-body .caption, div#calpopup-body blockquote .meat .breadcrumb, blockquote .meat div#calpopup-body .breadcrumb, div#calpopup-body .meat blockquote .breadcrumb, .meat blockquote div#calpopup-body .breadcrumb, div#calpopup-body blockquote .field, blockquote div#calpopup-body .field, div#calpopup-body blockquote .item-list ul.pager li, blockquote .item-list ul.pager div#calpopup-body li, div#calpopup-body .item-list ul.pager blockquote li, .item-list ul.pager blockquote div#calpopup-body li, div#calpopup-body table.views-table caption, table.views-table div#calpopup-body caption, div#calpopup-body table.cms caption, table.cms div#calpopup-body caption, div#calpopup-body legend {
+  font-size: 12pt; }
+div#calpopup-body #nodelink {
+  display: none; }
+div#calpopup-body ul.links {
+  font-size: 10pt; }
+  div#calpopup-body ul.links li {
+    padding: 0; }
+
+/* News/Event fields */
+.field-field-date, .field-field-position, .field-field-date-pub {
+  font-style: italic; }
+
+.field-field-speaker {
+  font-weight: bold; }
+
+/*.field-field-related-research {
+	padding-top: 1em;
+}*/
+.field-label {
+  margin-top: 1em; }
+
+fieldset.fieldgroup {
+  border: 0;
+  border-top: 1px solid #DDD;
+  padding: 1em 0;
+  margin-bottom: 0; }
+  fieldset.fieldgroup legend {
+    font-family: "DIN Medium", "Helvetica Neue", Arial, sans-serif;
+    font-size: 11pt;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 1em; }
+    @media screen and (min-width: 1200px) {
+      fieldset.fieldgroup legend {
+        font-size: 12pt; } }
+fieldset.group-comment legend {
+  margin-bottom: 0; }
+
+/* Course details page, Research Area page */
+div.fieldgroup.group-details, div.fieldgroup.group-info {
+  float: none;
+  width: 100%;
+  margin: 0; }
+  div.fieldgroup.group-details .content, div.fieldgroup.group-info .content {
+    padding-left: 0; }
+    div.fieldgroup.group-details .content .field, div.fieldgroup.group-info .content .field {
+      margin: 1em 0; }
+      div.fieldgroup.group-details .content .field p, div.fieldgroup.group-details .content .field ul, div.fieldgroup.group-details .content .field ol, div.fieldgroup.group-details .content .field table td, table div.fieldgroup.group-details .content .field td, div.fieldgroup.group-details .content .field table th, table div.fieldgroup.group-details .content .field th, div.fieldgroup.group-details .content .field cite, div.fieldgroup.group-details .content .field .caption, div.fieldgroup.group-details .content .field .meat .breadcrumb, .meat div.fieldgroup.group-details .content .field .breadcrumb, div.fieldgroup.group-details .content .field .field, div.fieldgroup.group-details .content .field .item-list ul.pager li, .item-list ul.pager div.fieldgroup.group-details .content .field li, div.fieldgroup.group-info .content .field p, div.fieldgroup.group-info .content .field ul, div.fieldgroup.group-info .content .field ol, div.fieldgroup.group-info .content .field table td, table div.fieldgroup.group-info .content .field td, div.fieldgroup.group-info .content .field table th, table div.fieldgroup.group-info .content .field th, div.fieldgroup.group-info .content .field cite, div.fieldgroup.group-info .content .field .caption, div.fieldgroup.group-info .content .field .meat .breadcrumb, .meat div.fieldgroup.group-info .content .field .breadcrumb, div.fieldgroup.group-info .content .field .field, div.fieldgroup.group-info .content .field .item-list ul.pager li, .item-list ul.pager div.fieldgroup.group-info .content .field li {
+        margin-top: 0; }
+  @media screen and (min-width: 900px) {
+    div.fieldgroup.group-details, div.fieldgroup.group-info {
+      float: right;
+      width: 25%;
+      margin: 0 0 0 3.03%; }
+      div.fieldgroup.group-details h2, div.fieldgroup.group-details h3, div.fieldgroup.group-details table.views-table th, table.views-table div.fieldgroup.group-details th, div.fieldgroup.group-details table.cms th, table.cms div.fieldgroup.group-details th, div.fieldgroup.group-details .field-field-course-number .field-item, .field-field-course-number div.fieldgroup.group-details .field-item, div.fieldgroup.group-details h4, div.fieldgroup.group-details h5, div.fieldgroup.group-details h6, div.fieldgroup.group-details blockquote p, blockquote div.fieldgroup.group-details p, div.fieldgroup.group-details blockquote ul, blockquote div.fieldgroup.group-details ul, div.fieldgroup.group-details blockquote ol, blockquote div.fieldgroup.group-details ol, div.fieldgroup.group-details blockquote table td, blockquote table div.fieldgroup.group-details td, div.fieldgroup.group-details table blockquote td, table blockquote div.fieldgroup.group-details td, div.fieldgroup.group-details blockquote table th, blockquote table div.fieldgroup.group-details th, div.fieldgroup.group-details table blockquote th, table blockquote div.fieldgroup.group-details th, div.fieldgroup.group-details blockquote cite, blockquote div.fieldgroup.group-details cite, div.fieldgroup.group-details blockquote .caption, blockquote div.fieldgroup.group-details .caption, div.fieldgroup.group-details blockquote .meat .breadcrumb, blockquote .meat div.fieldgroup.group-details .breadcrumb, div.fieldgroup.group-details .meat blockquote .breadcrumb, .meat blockquote div.fieldgroup.group-details .breadcrumb, div.fieldgroup.group-details blockquote .field, blockquote div.fieldgroup.group-details .field, blockquote div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content blockquote .field, div.fieldgroup.group-details blockquote div.fieldgroup.group-info .content .field, blockquote div.fieldgroup.group-info .content div.fieldgroup.group-details .field, div.fieldgroup.group-info .content blockquote div.fieldgroup.group-details .field, div.fieldgroup.group-details blockquote .item-list ul.pager li, blockquote .item-list ul.pager div.fieldgroup.group-details li, div.fieldgroup.group-details .item-list ul.pager blockquote li, .item-list ul.pager blockquote div.fieldgroup.group-details li, div.fieldgroup.group-details table.views-table caption, table.views-table div.fieldgroup.group-details caption, div.fieldgroup.group-details table.cms caption, table.cms div.fieldgroup.group-details caption, div.fieldgroup.group-info h2, div.fieldgroup.group-info h3, div.fieldgroup.group-info table.views-table th, table.views-table div.fieldgroup.group-info th, div.fieldgroup.group-info table.cms th, table.cms div.fieldgroup.group-info th, div.fieldgroup.group-info .field-field-course-number .field-item, .field-field-course-number div.fieldgroup.group-info .field-item, div.fieldgroup.group-info h4, div.fieldgroup.group-info h5, div.fieldgroup.group-info h6, div.fieldgroup.group-info blockquote p, blockquote div.fieldgroup.group-info p, div.fieldgroup.group-info blockquote ul, blockquote div.fieldgroup.group-info ul, div.fieldgroup.group-info blockquote ol, blockquote div.fieldgroup.group-info ol, div.fieldgroup.group-info blockquote table td, blockquote table div.fieldgroup.group-info td, div.fieldgroup.group-info table blockquote td, table blockquote div.fieldgroup.group-info td, div.fieldgroup.group-info blockquote table th, blockquote table div.fieldgroup.group-info th, div.fieldgroup.group-info table blockquote th, table blockquote div.fieldgroup.group-info th, div.fieldgroup.group-info blockquote cite, blockquote div.fieldgroup.group-info cite, div.fieldgroup.group-info blockquote .caption, blockquote div.fieldgroup.group-info .caption, div.fieldgroup.group-info blockquote .meat .breadcrumb, blockquote .meat div.fieldgroup.group-info .breadcrumb, div.fieldgroup.group-info .meat blockquote .breadcrumb, .meat blockquote div.fieldgroup.group-info .breadcrumb, div.fieldgroup.group-info blockquote .field, blockquote div.fieldgroup.group-info .field, div.fieldgroup.group-info blockquote div.fieldgroup.group-details .content .field, blockquote div.fieldgroup.group-details .content div.fieldgroup.group-info .field, div.fieldgroup.group-details .content blockquote div.fieldgroup.group-info .field, blockquote div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content blockquote .field, div.fieldgroup.group-info blockquote .item-list ul.pager li, blockquote .item-list ul.pager div.fieldgroup.group-info li, div.fieldgroup.group-info .item-list ul.pager blockquote li, .item-list ul.pager blockquote div.fieldgroup.group-info li, div.fieldgroup.group-info table.views-table caption, table.views-table div.fieldgroup.group-info caption, div.fieldgroup.group-info table.cms caption, table.cms div.fieldgroup.group-info caption {
+        margin-top: 0; } }
+
+.field-field-course-number .field-item {
+  color: #858585; }
+
+/* Drupal blocks */
+.block {
+  color: #3D4A43;
+  margin: 1em 0; }
+  .block ul {
+    margin-top: 1em;
+    margin-bottom: 1em; }
+
+a.editblock, .item-list ul.pager li a.editblock {
+  color: #858585;
+  font-size: 11pt;
+  line-height: 1.5em; }
+  a.editblock:hover, .item-list ul.pager li a.editblock:hover {
+    color: #000; }
+
+#blocks tr.region-message {
+  background-color: #fff; }
+
+/* User block */
+.block-user {
+  margin-top: 1em; }
+
+/* Drupal messages */
+.messages, div.error, .div.warning, .compact-link, .more-help-link, .help, .description {
+  margin-top: 10px;
+  padding: 0.5em;
+  color: #3D4A43;
+  font-size: 11pt;
+  line-height: 1.5em; }
+  .messages p, .messages ul, .messages ol, .messages table td, table .messages td, .messages table th, table .messages th, .messages cite, .messages .caption, .messages .meat .breadcrumb, .meat .messages .breadcrumb, .messages .field, .messages div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content .messages .field, .messages div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content .messages .field, .messages .item-list ul.pager li, .item-list ul.pager .messages li, .messages ul, div.error p, div.error ul, div.error ol, div.error table td, table div.error td, div.error table th, table div.error th, div.error cite, div.error .caption, div.error .meat .breadcrumb, .meat div.error .breadcrumb, div.error .field, div.error div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content div.error .field, div.error div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content div.error .field, div.error .item-list ul.pager li, .item-list ul.pager div.error li, div.error ul, .div.warning p, .div.warning ul, .div.warning ol, .div.warning table td, table .div.warning td, .div.warning table th, table .div.warning th, .div.warning cite, .div.warning .caption, .div.warning .meat .breadcrumb, .meat .div.warning .breadcrumb, .div.warning .field, .div.warning div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content .div.warning .field, .div.warning div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content .div.warning .field, .div.warning .item-list ul.pager li, .item-list ul.pager .div.warning li, .div.warning ul, .compact-link p, .compact-link ul, .compact-link ol, .compact-link table td, table .compact-link td, .compact-link table th, table .compact-link th, .compact-link cite, .compact-link .caption, .compact-link .meat .breadcrumb, .meat .compact-link .breadcrumb, .compact-link .field, .compact-link div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content .compact-link .field, .compact-link div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content .compact-link .field, .compact-link .item-list ul.pager li, .item-list ul.pager .compact-link li, .compact-link ul, .more-help-link p, .more-help-link ul, .more-help-link ol, .more-help-link table td, table .more-help-link td, .more-help-link table th, table .more-help-link th, .more-help-link cite, .more-help-link .caption, .more-help-link .meat .breadcrumb, .meat .more-help-link .breadcrumb, .more-help-link .field, .more-help-link div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content .more-help-link .field, .more-help-link div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content .more-help-link .field, .more-help-link .item-list ul.pager li, .item-list ul.pager .more-help-link li, .more-help-link ul, .help p, .help ul, .help ol, .help table td, table .help td, .help table th, table .help th, .help cite, .help .caption, .help .meat .breadcrumb, .meat .help .breadcrumb, .help .field, .help div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content .help .field, .help div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content .help .field, .help .item-list ul.pager li, .item-list ul.pager .help li, .help ul, .description p, .description ul, .description ol, .description table td, table .description td, .description table th, table .description th, .description cite, .description .caption, .description .meat .breadcrumb, .meat .description .breadcrumb, .description .field, .description div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content .description .field, .description div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content .description .field, .description .item-list ul.pager li, .item-list ul.pager .description li, .description ul {
+    margin: 0;
+    font-size: 11pt;
+    line-height: 1.5em; }
+
+.messages, .preview {
+  margin: 0.75em 0 0.75em; }
+
+.description {
+  margin-bottom: 0.75em;
+  color: #898989; }
+
+div.error, tr.error {
+  background: #efc7a0;
+  /* Pale orange */
+  border: 1px solid #ef7a08;
+  /* Orange */
+  margin-top: 5px; }
+
+/* Views module */
+.views-admin-links ul.links,
+.views-tabset ul {
+  /* Subtext menu */
+  font-size: 11pt;
+  line-height: 1.5em; }
+
+.views-tabset {
+  background-color: #F2F5F3; }
+
+.views-edit-view {
+  /* Configuration screen */ }
+  .views-edit-view form, .views-edit-view p, .views-edit-view ul, .views-edit-view ol, .views-edit-view table td, table .views-edit-view td, .views-edit-view table th, table .views-edit-view th, .views-edit-view cite, .views-edit-view .caption, .views-edit-view .meat .breadcrumb, .meat .views-edit-view .breadcrumb, .views-edit-view .field, .views-edit-view div.fieldgroup.group-details .content .field, div.fieldgroup.group-details .content .views-edit-view .field, .views-edit-view div.fieldgroup.group-info .content .field, div.fieldgroup.group-info .content .views-edit-view .field, .views-edit-view .item-list ul.pager li, .item-list ul.pager .views-edit-view li, .views-edit-view ul {
+    font-size: 11pt;
+    line-height: 1.5em; }
+  .views-edit-view #views-ajax-title {
+    padding: 1em 1em; }
+
+.views-basic-info, #views-ajax-pad, .views-query-info, #views-ajax-pad .message {
+  color: #2a2a2a;
+  /* Dark grey */
+  font-size: 11pt;
+  line-height: 1.5em; }
+  .views-basic-info ul.links, #views-ajax-pad ul.links, .views-query-info ul.links, #views-ajax-pad .message ul.links {
+    font-size: 11pt;
+    line-height: 1.5em; }
+
+.item-list ul.pager li {
+  border-bottom: none;
+  padding: 0.5em 0.25em; }
+
+/* Drupal admin */
+div.admin-panel, .admin-list {
+  font-size: 11pt;
+  line-height: 1.5em; }
+
+/* Drupal menu */
+ul.menu {
+  margin: 0; }
+  ul.menu li {
+    margin: 0; }
+
+/* Drupal tabs */
+#tabs-wrapper {
+  padding: 1em 0; }
+
+ul.tabs {
+  padding: 0 0 0.25em 1em; }
+  ul.tabs li a, ul.tabs .item-list ul.pager li a, .item-list ul.pager ul.tabs li a {
+    padding: 0.3em 1em; }
+
+/* Drupal comments */
+#comments {
+  border-top: 1px dotted #707258;
+  /* Khaki */
+  margin-top: 20px; }
+
+#comments h3, #comments table.views-table th, table.views-table #comments th, #comments table.cms th, table.cms #comments th, #comments .field-field-course-number .field-item, .field-field-course-number #comments .field-item {
+  font-size: 1.2em;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: 5px; }
+
+.comment {
+  margin-bottom: 20px; }
+
+.comment .submitted {
+  margin-top: 0; }
+
+.comment .links {
+  padding: 3px;
+  background-color: #2a2a2a;
+  /* Dark grey bar */ }
+
+.comment .links li {
+  text-transform: capitalize;
+  padding-left: 20px;
+  padding-right: 10px;
+  font-size: 1.1em; }
+
+.comment_delete {
+  background: url(images/icon_comment_delete.gif) no-repeat top left; }
+
+.comment_edit {
+  background: url(images/icon_comment_edit.gif) no-repeat top left; }
+
+.comment_reply {
+  background: url(images/icon_comment_reply.gif) no-repeat top left; }
+
+ul.links li.comment_add {
+  padding-left: 20px;
+  background: url(images/icon_comment_add.gif) no-repeat top left;
+  font-size: 1.1em; }
+
+.new {
+  font-size: 1.1em;
+  background-color: #EF7A08;
+  /* Orange */
+  padding: 1px 2px; }
+
+/* Forms */
+.form-checkboxes, .form-radios, .form-checkboxes .form-item, .form-radios .form-item {
+  margin: 0.25em 0; }
+
+.form-item .description {
+  margin-top: 0;
+  font-size: 9pt; }
+
+#center form {
+  margin-bottom: 2em; }
+
+.form-button, .form-submit {
+  margin: 2em 0.5em 1em 0;
+  /* LTR */ }
+
+#dblog-form-overview .form-submit,
+.confirmation .form-submit,
+.search-form .form-submit,
+.poll .form-submit,
+fieldset .form-button, fieldset .form-submit,
+.sidebar .form-button, .sidebar .form-submit,
+table .form-button, table .form-submit {
+  margin: 0; }
+
+.box {
+  margin-bottom: 2.5em; }
+
+/*# sourceMappingURL=global.css.map */
