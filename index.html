@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../../global.css">
+    <title>Cmput 204 - Python Class Notes and Code</title>
+  </head>
+  <body>
+  
+<h1>Python Notes and Sample Code from Class</h1>
+<p>
+All sample code is written in Python 3 and is in the 
+<a href="code">code directory</a>.
+<br>
+The notes are arranged by class/week in which we introduced the concepts.
+
+
+<h3>Apr 1-8. Dynamic Programming</h3>
+    <ul>
+    <li><a href="code/reverse2.py">reverse2.py</a> Reverse for graphs with edge lengths. Helper for dagShortestDistance.py .</li>
+    <li><a href="code/topologicalOrdering2.py">topologicalOrdering2.py</a> Topological ordering for graphs with edge lengths. Helper for dagShortestDistance.py .</li>
+    <li><a href="code/dagShortestDistance.py">dagShortestDistance.py</a> DP for shortest distances in a DAG.</li>
+    <li><a href="code/dagShortestDistanceTest.py">dagShortestDistanceTest.py</a> Tests.</li>
+    <li><a href="code/longestIncreasingSubsequence.py">longestIncreasingSubsequence.py</a> DP for longest increasing subsequence.</li>
+    <li><a href="code/longestIncreasingSubsequenceTest.py">longestIncreasingSubsequenceTest.py</a> Tests.</li>
+    <li><a href="code/editDistance.py">editDistance.py</a> DP for edit distance.</li>
+    <li><a href="code/editDistanceTest.py">editDistanceTest.py</a> Tests.</li>
+    <li><a href="code/knapsackWithRepetition.py">knapsackWithRepetition.py</a> Knapsack with repetition.</li>
+    <li><a href="code/knapsack.py">knapsack.py</a> Knapsack (without repetition).</li>
+    <li><a href="code/knapsackTest.py">knapsackTest.py</a> Tests for both kinds of knapsack.</li>
+    <li><a href="code/fib7.py">fib7.py</a> Fibonacci with memo.</li>
+    <li><a href="code/fib8.py">fib8.py</a> Fibonacci with memo, and tracing.</li>
+    <li> Initialization syntax:  <code>E = [[0 for j in range(n+1)] for i in range(m+1)]</code> sets all E[i,j] = 0
+    </ul>
+
+<h3>Mar 23-30, Union-find and Kruskal's algorithm for minimum spanning tree</h3>
+    <ul>
+    <li><a href="code/unionFindVersion1.py">unionFindVersion1.py</a> Basic version, inefficient.</li>
+    <li><a href="code/unionFindVersion2.py">unionFindVersion2.py</a> Union by rank.</li>
+    <li><a href="code/unionFindVersion3.py">unionFindVersion3.py</a> Union by rank and path compression.</li>
+    <li><a href="code/unionFindTest.py">unionFindTest.py</a> Test program for all three versions of union-find.</li>
+    <li><a href="code/mstKruskal.py">mstKruskal.py</a> Kruskal's algorithm for MST.</li>
+    <li><a href="code/mstTest.py">mstTest.py</a> Tests for mstKruskal.py .</li>
+    </ul>
+
+<h3>Mar 21, Edges with negative lengths and Bellman-Ford</h3>
+    <ul>
+    <li><a href="code/bellmanFord.py">bellmanFord.py</a> Bellman-Ford algorithm.</li>
+    <li><a href="code/bellmanFordTest.py">bellmanFordTest.py</a> Testing Bellman-Ford on sampleGraphsWithNegativeLengths.py .</li>
+    <li><a href="code/heap.py">heap.py</a> A simple heap-based implementation of priority queue by Jesse Huard.</li>
+    <li><a href="code/sampleGraphsWithNegativeLengths.py">sampleGraphsWithNegativeLengths.py</a> Graphs with some negative length edges, but no negative cycles.</li>
+     <li><b>New Apr 5</b> <a href="code/dijkstraTestNegativeEdges.py">dijkstraTestNegativeEdges.py</a> Compares Dijkstra and Bellman-Ford with negative edges, including an example where Dijkstra fails.</li>
+   <li>Anonymous variable _ if not needed otherwise, e.g. for loops: for _ in range(5)</li>
+    </ul>
+
+<h3>Mar 14-18, Edges with lengths and Dijkstra</h3>
+    <ul>
+    <li><a href="code/dijkstra.py">dijkstra.py</a> Dijkstra's algorithm for single source shortest paths.</li>
+    <li><a href="code/dijkstraTest.py">dijkstraTest.py</a> Tests for Dijkstra's algorithm.</li>
+    <li><a href="code/pq.py">pq.py</a> Priority queue with naive O(n) extractMin implementation.</li>
+    <li><a href="code/pqTest.py">pqTest.py</a> Tests for pq.py.</li>
+    <li><a href="code/sampleGraphsWithLengths.py">sampleGraphsWithLengths.py</a> Some sample graphs where edges have lengths.</li>
+    <li><a href="code/edgeWithLength.py">edgeWithLength.py</a> Implementing edges with length as a pair, for adjacency list.</li>
+    </ul>
+    
+
+<h3>Mar 14-18, bfs and fifo queue</h3>
+    <ul>
+    <li><a href="code/bfs.py">bfs.py</a> Breadth-first search (bfs).</li>
+    <li><a href="code/bfsTest.py">bfsTest.py</a> Testing bfs.py.</li>
+    <li><a href="code/queueTest.py">queueTest.py</a> Using a Python deque as a first-in first-out queue.</li>
+    </ul>
+    
+<h3>Mar 14-18, scc</h3>
+    <ul>
+    <li><a href="code/scc.py">scc.py</a> Kosaraju's algorithm for strongly connected components.</li>
+    <li><a href="code/sccTest.py">sccTest.py</a> Testing scc.py on examples from directedGraphs.py .</li>
+    <li><a href="code/dfsPostOrderStack.py">dfsPostOrderStack.py</a> dfs building a stack of nodes in postvisit order. This is the first dfs used in scc.</li>
+    </ul>
+
+<h3>Mar 7-11, directed graphs</h3>
+    <ul>
+    <li><a href="code/topologicalOrdering.py">topologicalOrdering.py</a> Topological ordering of a dag with dfs.</li>
+    <li><a href="code/topologicalOrderingTest.py">topologicalOrderingTest.py</a> Testing topologicalOrdering.py on some dags from directedGraphs.py .</li>
+    <li><a href="code/reverse.py">reverse.py</a> Reverse a graph.</li>
+    <li><a href="code/reverseTest.py">reverseTest.py</a> Test reverse.py .</li>
+    <li><a href="code/directedGraphs.py">directedGraphs.py</a> Samples of directed graphs.</li>
+    </ul>
+    
+<h3>Mar 7-11, undirected graphs</h3>
+    <ul>
+    <li><a href="code/dfsUndirectedTest.py">dfsUndirectedTest.py</a> Testing diferent dfs applications.</li>
+    <li><a href="code/dfs.py">dfs.py</a> Basic dfs code.</li>
+    <li><a href="code/dfsTimestamp.py">dfsTimestamp.py</a> Pre- and postvisit timestamps with dfs.</li>
+    <li><a href="code/dfsConnectedComponents.py">dfsConnectedComponents.py</a> Computing and labeling connected components with dfs.</li>
+    </ul>
+
+
+<h3>Feb 29 - Mar 4</h3>
+    <ul>
+    <li><a href="code/dfsVersion1.py">dfsVersion1.py</a> Dfs for full graph traversal. Uses a Python list for visited.</li>
+    <li><a href="code/dfsVersion2.py">dfsVersion2.py</a> Same, but uses a Python dictionary for visited.</li>
+    <li><a href="code/exploreSimple.py">exploreSimple.py</a> Naive dfs, causes an infinite loop.</li>
+    <li><a href="code/exploreSimple2.py">exploreSimple2.py</a> Same as  exploreSimple.py, but with a limited number of dfs calls.</li>
+    <li><a href="code/adjListDictionary.py">adjListDictionary.py</a> Adjacency lists implemented using a Python dictionary.</li>
+    <li><a href="code/adjListIndex.py">adjListIndex.py</a> Classical implementation of adjacency lists using an index into a Python list for each node, and a separate list with node information.</li>
+    <li><a href="code/undirectedGraphs.py">undirectedGraphs.py</a> Examples for undirected graphs.</li>
+    <li><a href="https://docs.python.org/3.5/tutorial/datastructures.html#dictionaries">Dictionary</a> data structure.</li>
+    
+    <li> <a href="https://docs.python.org/3.5/library/collections.html#collections.OrderedDict">OrderedDict</a>.</li>
+    <li> <a href="https://wiki.python.org/moin/TimeComplexity">Time complexity of Python dictionary operations (and many other algorithms)</a>.</li>
+    <li> <a href="http://networkx.github.io">NetworkX</a> - A powerful open source graph library for
+Python.</li>
+    </ul>
+
+<h3>Feb 22-26</h3>
+    <ul>
+    <li><a href="code/selection.py">selection.py</a> Randomized selection.</li>
+    <li><a href="code/selectionTrace.py">selectionTrace.py</a> Same with trace.</li>
+    <li><a href="code/isSorted.py">isSorted.py</a> Check if sequence is sorted.</li>
+    <li>Boolean values True and False. Notice the uppercase!</li>
+    </ul>
+<h3>Feb 8-13</h3>
+    <ul>
+    <li><a href="code/mulCalls.py">mulCalls.py</a> Count number of recursive calls in actual multiplication.</li>
+    <li><a href="code/mulBits.py">mulBits.py</a> Histogram - distribution of length of numbers in multiplication.</li>
+    <li><a href="code/slice.py">slice.py</a> Slicing.</li>
+    <li><a href="code/mergesort.py">mergesort.py</a> Simple recursive mergesort.</li>
+    <li><a href="code/mergeTest.py">mergeTest.py</a> Testing mergesort implementations.</li>
+    <li><a href="code/merge.py">merge.py</a> Non-recursive merge.</li>
+    <li><a href="code/mergeTrace.py">mergeTrace.py</a> Tracing of non-recursive merge.</li>
+    <li><a href="code/mergeIter.py">mergeIter.py</a> Merge without the recursive split.</li>
+    <li><a href="code/mergeIterTrace.py">mergeIterTrace.py</a> Same with trace.</li>
+    <li>Slicing to efficiently access a range of elements in a sequence. E.g. 
+    a[2:5], a[:3], a[7:], a[:]</li>
+    <li>deque, double-ended queue, used as first in - first out (FIFO) queue.</li>
+    </ul>
+
+<h3>Feb 1-5</h3>
+    <ul>
+    <li><a href="code/binsearch.py">binsearch.py</a> Binary Search.</li>
+    <li><a href="code/dcsimulator.py">dcsimulator.py</a> Divide and Conquer Simulator, computes worst-case number of calls on each level of recursion. Also prints total number of calls.</li>
+    <li><b>Modified Feb 8: set limit=32 for consistency with slides and assignment 2</b> 
+    <a href="code/gaussmultiply.py">gaussmultiply.py</a> Faster multiplication with Gauss' trick.</li>
+    <li><b>Modified Feb 8: set limit=32 for consistency with slides and assignment 2</b>
+    <a href="code/gaussmultiplyTrace.py">gaussmultiplyTrace.py</a> Same with trace.</li>
+    <li><a href="code/gaussmultiplyTest.py">gaussmultiplyTest.py</a> Test gaussmultiply for a wide variety of random inputs.</li>
+    <li>n.bit_length() number of bits needed to represent integer n.</li>
+    <li>x << n, x left-shifted by n.</li>
+    <li>x >> n, x right-shifted by n.</li>
+    </ul>
+    
+<h3>Jan 25-29</h3>
+    <ul>
+    <li><a href="code/euclid.py">euclid.py</a> Euclid's Algorithm for GCD.</li>
+    <li><a href="code/euclidTrace.py">euclidTrace.py</a> Same with trace.</li>
+    <li><a href="code/euclidFib.py">euclidFib.py</a> Fibonacci example - worst case for Euclid's algorithm.</li>
+    <li><a href="code/extendedeuclid.py">extendedeuclid.py</a> Extended Euclid's Algorithm for GCD.</li>
+    <li><a href="code/extendedeuclidTrace.py">extendedeuclidTrace.py</a> Same with trace.</li>
+    <li><a href="code/mulinv.py">mulinv.py</a> Multiplicative Inverse.</li>
+    <li><a href="code/mulinvTrace.py">mulinvTrace.py</a> Same with trace.</li>
+    </ul>
+    
+<h3>Jan 22</h3>
+    <ul>
+    <li><a href="code/rdiv.py">rdiv.py</a> Recursive Algorithm for division.</li>
+    <li><a href="code/rdiv-trace.py">rdiv-trace.py</a> Shows recursive calls and results for rdiv.</li>
+    <li><b>Added Jan 30</b> <a href="code/modexp.py">modexp.py</a> Modular exponentiation.</li>
+    <li><b>Added Jan 30</b> <a href="code/modexpTrace.py">modexpTrace.py</a> Same with trace.</li>
+    <li><b>Added Jan 30</b> <a href="code/modexpTest.py">modexpTest.py</a> 
+    Compare modexp results with built-in pow() function.</li>
+    <li>import statement allows to use functions defined in other files.</li>
+    </ul>
+<h3>Jan 20</h3>
+    <ul>
+    <li><a href="code/rmult-trace.py">rmult-trace.py</a> Shows recursive calls and results for rmult.</li>
+    </ul>
+<h3>Jan 13</h3>
+    <ul>
+    <li><a href="code/fib4-trace.py">fib4-trace.py</a> Simple tracing with print statements.</li>
+    <li><a href="code/fib4-assert.py">fib4-assert.py</a> Using assert to check a simple loop invariant.</li>
+    <li><a href="code/ff.py">ff.py</a> Loop invariant example from slides.</li>
+    <li><a href="code/mr.py">mr.py</a> Tracing example from slides.</li>
+    </ul>
+    <ul>
+    <li>Difference between equality test == and assignment =.</li>
+    <li>In Python3, for integer division (with truncation) use //.
+    Example: 29//2 = 14, while 29/2 = 14.5</li>
+    <li>Built-in function len(L) computes length of list L.
+    The indices of list elements range from 0 to len(L) - 1. Trying to access L[len(L)] is an error.</li>
+    <li>assert statement, e.g. assert j == len(L) - 1.</li>
+    <li># is used for comments.</li>
+    <li>Use print() for simple tracing.</li>
+    <li><a href="https://docs.python.org/2/library/trace.html">Python library trace function</a>.</li>
+    </ul>
+
+<h3>Jan 11</h3>
+No Python today
+<p>
+<h3>Jan 8</h3>
+    <ul>
+    <li><b>Updated Jan 8</b> <a href="code/fib5.py">fib5.py</a> Growth of fib(n) and T(n).</li>
+    <li><b>Updated Jan 8</b> <a href="code/fib6.py">fib6.py</a> Growth of Fibonacci numbers vs. powers of golden ratio</li>
+    <li><b>Updated Jan 8</b> <a href="code/fib6-t.py">fib6-t.py</a> Growth of <tt>T(n)</tt> vs. powers of golden ratio</li>
+    </ul>
+
+<h3>Jan 6</h3>
+<ul>
+<li>indentation is significant
+
+<li>def defines a function with name and argument(s).
+
+<li>range statement, e.g. range(100) generates all numbers 0, 1, ..., 99,
+and range(10,20) generates 10, 11, ..., 19
+
+<li>a, b = b, a+b simultaneous assignment, uses <b>old</b> value of a on the right side
+
+<li>Python can compute with arbitrarily large numbers E.g. fib(1000000) is large.
+
+<li>Lists and append. E.g. L = [1,2], L.append(4) gives L = [1,2,4],
+L[i] gives element at index i, e.g. here: L[0] = 1, L[2] = 4.
+
+<li> Code in <a href="code">code directory</a>:
+    <ul>
+    <li><a href="code/fib.py">fib.py</a> First, extremely slow Fibonacci code.</li>
+    <li><a href="code/fib2.py">fib2.py</a> Second, faster Fibonacci code.</li>
+    <li><a href="code/fib3.py">fib3.py</a> Same Fibonacci code for larger input numbers.</li>
+    <li><a href="code/fib4.py">fib4.py</a> Precompute list of Fibonacci numbers.</li>
+    </ul>
+</ul>
+
+<h3>Jan 4</h3>
+<ul>
+<li>See the 
+<a href="../../204-general/python.html">Python language information</a>
+ for how to run python programs,
+or install python on your own computer.
+<li>To use the sample codes, the simplest way is to save an example to a file 
+and run it from the command line, e.g.
+<pre>python3 fib.py</pre>
+</ul>
+
+
+  </body>
+</html>
